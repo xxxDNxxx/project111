@@ -104,12 +104,13 @@ if(window.back()){
           </div>
 
           <!-- <button  class="btn btn-primary" >Login</button> -->
-          <!-- <button type="submit" class="w3-button w3-black w3-round-large">Login</button> -->
+          <!-- <button type="submit" class="w3-button w3-black w3-round-large">
+          </button> -->
           <button type="submit" class="btn border1 border111">Login</button>
 
   &ensp;&emsp;&ensp;&ensp;
 
-  <a href="register.php" class="btn border1 border111" action="register.php">สมัครสมาชิก</a>
+  <a href="register.php" class="btn border1 border111" action="register.php">Register</a>
 
 
 </form></td>
