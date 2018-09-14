@@ -84,7 +84,7 @@ if(window.back()){
 </head>
   <body>
     <div class="ex1">
-<img src="ktheader.png" alt="headerkt" width="100%" height="300px" >
+<img src="ktheader.png" alt="headerkt" width="100%" height="200px" >
   </div>
 
   <!-- <img  src="KT.ONLINE.png" width="100%" height="200" > -->
