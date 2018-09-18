@@ -6,16 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <style type="text/css">
-    body {
-	
-	background-image:url(1511.jpg);
-	background-size:cover;
-	background-attachment:fixed;
-	
-
-	 }
-    </style>
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+ 
     <?php
 	try{
   $connection= new MongoClient();
@@ -43,84 +35,146 @@
     }  	  
 	}catch(Exception $e){}
   ?>
-    <title>Weblog</title>
+    <title>KATOO - TELL YOUR STORY</title>
   </head>
   <body>
-    <img  src="31344686_1704141333000568_3657415830821404672_n.png" >
-</h1>
-    <table width="1000" border="0" align="center" cellpadding="50" cellspacing="50">
-      <tr>
-        <th align="center" nowrap>
-        <form  method="post">
-          <div class="form-group col-md-6" >
-            <label for="inputAddress2">Username</label>
-            <input name="username" type="text" class="form-control" id="inputAddress2" placeholder="Username">
+
+    <section class="hero is-primary  is-fullheight header-image">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+          <!--  <a class="navbar-item">
+              <img src="https://www.picz.in.th/images/2018/09/17/f8MP1q.png" alt="Logo"> 
+            </a>-->
+            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
           </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Password</label>
-            <input name="password"type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          <div id="navbarMenuHeroA" class="navbar-menu">
+              
+            <div class="navbar-end">
+                <a href="login.php" class="navbar-item ">
+                     เข้าใช้งาน
+                  </a>
+                  <a class="navbar-item is-active">
+                     สมัครสมาชิก
+                    </a>
+                  <a class="navbar-item">
+                     ติดต่อเรา
+                    </a>
+            </div>
+
+
+            </div>
+
           </div>
-          <div class="form-group col-md-6">
-            <label for="inputAddress">Name</label>
-            <input name="name" type="text" class="form-control" id="inputAddress" placeholder="ชื่อนามสกุล">
-          </div>
-          <div class="form-group col-md-6">
-            <p>
-            
-               <p>Gender</p>
-    	<input name="gender" type="radio" value="male" />ชาย
-    	<input name="gender" type="radio" value="female" />หญิง
-            </p>
-          
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input name="email" type="email" class="form-control"  placeholder="Email">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputAddress">Address</label>
-            <input name="address2" type="text" class="form-control" id="inputAddress" placeholder="ชื่อนามสกุล">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputCity">ตำบล</label>
-            <input name="city" type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputCity">อำเภอ</label>
-            <input name="district" type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">จังหวัด</label>
-            <select name="province" class="form-control" id="inputState">
-              <option selected>Choose...</option>
-              <option>กรุงเทพมหานคร </option>
-              <option>กระบี่ </option>
-              <option>ชลบุรี </option>
-              <option>ชัยนาท</option>
-              <option>ชัยภูมิ </option>
-              <option>สงขลา </option>
-              <option>อุดรธานี </option>
-              <option>หนองคาย </option>
-              <option>แพร่ </option>
-              <option>นครปฐม </option>
-            </select>
-          </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Postcode</label>
-            <input name="zipcode" type="text" class="form-control" id="inputZip">
-          </div>
-          </div>
-          
-  &ensp;&emsp;&ensp;&ensp;
+        </div>
+      </nav>
+    </div>
   
-  <button  type="submit" class="btn btn-primary">สมัครสมาชิก</button>
-        </form></th>
-      </tr>
-    </table>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+
+
+    <!--  <div class="container has-text-centered">
+  <h1 class="title">
+          Title
+        </h1>
+        <h2 class="subtitle">
+          Subtitle
+        </h2>
+      </div>
+    -->
+
+    </div>
+  
+    <!-- Hero footer: will stick at the bottom -->
+    <!--<div class="hero-foot">
+      <nav class="tabs">
+        <div class="container">
+          <ul>
+            <li class="is-active"><a>Overview</a></li>
+            <li><a>Modifiers</a></li>
+            <li><a>Grid</a></li>
+            <li><a>Elements</a></li>
+            <li><a>Components</a></li>
+            <li><a>Layout</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div> -->
+  </section>
+ 
+</section>
+
+<section class = "section bg-login">
+  
+<div class="label is-large">สมัครสมาชิก</div>
+   
+
+
+        <div class="field">
+            <p class="control has-icons-left has-icons-left">
+              <input class="input" name="username" type="email" placeholder="ชื่อผู้ใช้งาน">
+              <span class="icon is-small is-left">
+                  <img src="./img/TiNY2_BASICS_Profile-512.png">
+              </span>
+            </p>
+
+          </div>
+
+
+          <div class="field"> 
+              <p class="control has-icons-left">
+                <input class="input" name="password" type="password" placeholder="รหัสผ่าน">
+                <span class="icon is-small is-left">
+                  <img src="./img/password2-128.png">
+                </span>
+              </p>
+            </div>
+
+   <div class="field"> 
+              <p class="control has-icons-left">
+                <input class="input" name="password" type="password" placeholder="ยืนยันรหัสผ่าน">
+                <span class="icon is-small is-left">
+                  <img src="./img/password2-128.png">
+                </span>
+              </p>
+            </div>
+
+            <div class="label ">เพศ</div>
+            <div class="control">
+  <label class="radio">
+    <input type="radio" name="answer">
+    ชาย
+  </label>
+  <label class="radio">
+    <input type="radio" name="answer">
+    หญิง
+  </label>
+  <label class="radio">
+    <input type="radio" name="answer">
+    อื่นๆ
+  </label>
+  
+</div>
+
+<div class="navbar-end">
+<a action="register.php" class="button  is-inverted">
+                      <span class="icon">
+                        <img src="./img/regis.png">
+                      </span>
+                      <span>สมัครสมาชิก</span>
+                    </a>
+</div>
+
+
+</section>
+
+  
   </body>
 </html>
