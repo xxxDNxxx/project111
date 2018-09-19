@@ -149,7 +149,7 @@
 
 
                     <div class="navbar-end">
-                        <a href="register.php" class="button  is-inverted">
+                        <a href="register.php" class="button is-primary is-inverted is-outlined">
                             <span class="icon">
                               <img src="./img/regis.png">
                             </span>
