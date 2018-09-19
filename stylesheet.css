@@ -14,3 +14,16 @@
   html{
     background-color: #ffffff;
   }
+
+  .header-image {/*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
+  
+    /*background-image: url("https://www.picz.in.th/images/2018/09/17/fHdgtW.png"); */
+    background-image: url("https://www.picz.in.th/images/2018/09/18/fHTIGu.png"); 
+    /*background-image: url("https://www.picz.in.th/images/2018/09/17/f8MP1q.png"); */
+  
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-size: 100%;
+    background-color: rgb(93, 250, 185);
+  }

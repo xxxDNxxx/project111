@@ -11,7 +11,7 @@
 </head>
 <body>
   
-    <section class="hero is-primary  is-large header-image">
+    <section class="hero is-primary  is-fullheight header-image">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
           <nav class="navbar">
@@ -133,7 +133,7 @@
                         <div class="label">เพศ</div>
                         <label class="radio">
                           <input type="radio" name="foobar">
-                          ชาย
+                      <span>   ชาย </span>
                         </label>
                         <label class="radio">
                           <input type="radio" name="foobar" >

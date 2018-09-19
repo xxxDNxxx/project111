@@ -12,10 +12,11 @@
 </head>
 <body >
   
-    <section class="hero is-primary  is-large header-image">
+    <section class="hero is-primary  is-fullheight header-image ">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
+        
         <div class="container">
           <div class="navbar-brand">
           <!--  <a class="navbar-item">
@@ -50,36 +51,8 @@
     </div>
   
     <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-
-
-    <!--  <div class="container has-text-centered">
-  <h1 class="title">
-          Title
-        </h1>
-        <h2 class="subtitle">
-          Subtitle
-        </h2>
-      </div>
-    -->
-
-    </div>
+   
   
-    <!-- Hero footer: will stick at the bottom -->
-    <!--<div class="hero-foot">
-      <nav class="tabs">
-        <div class="container">
-          <ul>
-            <li class="is-active"><a>Overview</a></li>
-            <li><a>Modifiers</a></li>
-            <li><a>Grid</a></li>
-            <li><a>Elements</a></li>
-            <li><a>Components</a></li>
-            <li><a>Layout</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div> -->
   </section>
 
 
@@ -93,6 +66,7 @@
 
 
           <div class="label is-large">ลงชื่อเข้าใช้งาน</div>
+
           <div class="field">
       
               <div class="control has-icons-left has-icons-right">
