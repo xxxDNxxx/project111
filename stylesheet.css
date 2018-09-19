@@ -5,6 +5,13 @@
 
 }
 
+.ei{
+
+  margin-right: 20%;
+  margin-left: 20%;
+
+}
+
 
 .bg-primary {
 
@@ -26,4 +33,9 @@
     background-attachment: initial;
     background-size: 100%;
     background-color: rgb(93, 250, 185);
+  }
+  
+
+  .bg-columns{
+    background-color: #00d0b1c4;
   }

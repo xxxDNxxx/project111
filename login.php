@@ -37,7 +37,7 @@
                   <a class="navbar-item" href="register.php">
                      สมัครสมาชิก
                     </a>
-                  <a class="navbar-item">
+                  <a class="navbar-item" href="contact.php">
                      ติดต่อเรา
                     </a>
             </div>

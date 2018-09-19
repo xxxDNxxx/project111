@@ -29,13 +29,13 @@
               <div id="navbarMenuHeroA" class="navbar-menu">
                   
                 <div class="navbar-end">
-                    <a class="navbar-item "href="login.php">
+                    <a class="navbar-item " href="login.php">
                          เข้าใช้งาน
                       </a>
-                      <a class="navbar-item is-active"href="register.php">
+                      <a class="navbar-item is-active" href="register.php">
                          สมัครสมาชิก
                         </a>
-                      <a class="navbar-item">
+                      <a class="navbar-item" href="contact.php">
                          ติดต่อเรา
                         </a>
                 </div>
@@ -83,11 +83,12 @@
 
 
       <section class="section bg-login">
-        <div class="Columns">
 
-          <div class="Column">
+        <div class="columns ">
 
-            <form class="eiei">
+          <div class="column bg-columns">
+
+            <form class="eiei bg-columns">
 
 
                 <div class="label is-large">ลงชื่อเข้าใช้งาน</div>
