@@ -230,7 +230,7 @@
         <ul>
           <li class="is-active"><a href="index.php">หน้าหลัก</a></li>
           <li><a href="create.php">สร้างกระทู้</a></li>
-          <li><a href="user.php">UserHome</a></li>
+         <!-- <li><a href="user.php">UserHome</a></li> -->
           <li><a href="profile.php">โปรไฟล์</a></li>
           <li><a href="alert.php">แจ้งเตือน</a></li>
        
