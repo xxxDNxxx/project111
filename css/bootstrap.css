@@ -5094,7 +5094,7 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
-  background-color: #fff;
+  background-color: rgb(192, 105, 105);
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
