@@ -10,6 +10,9 @@
   margin-right: 20%;
   margin-left: 20%;
 
+}.bg-login {
+
+  background-color: #00d0b1;
 }
 
 
@@ -19,7 +22,7 @@
   }
 
   html{
-    background-color: #00d0b1ad;
+    background-color: #ffffffad;
   }
 
   .header-image {/*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
@@ -37,5 +40,5 @@
   
 
   .bg-columns{
-    background-color: #00d0b1c4;
+    background-color: #00d0b1;
   }

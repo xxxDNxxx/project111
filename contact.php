@@ -11,7 +11,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 </head>
 
-<body>
+<body class="bg-primary">
 
   <section class="hero is-primary  is-large header-image">
     <!-- Hero head: will stick at the top -->
@@ -69,13 +69,14 @@
 
       <div class="column is-half">
         <form>
-          <h3><b>ชื่อจริง</b></h3>
+        <div class="label">ชื่อจริง</div>
+          
 
           <div calss="field">
             <input class="input " type="text" placeholder="ขื่อ">
           </div>
           <h3 class="navbar-item"> </h3>
-          <h3><b>อีเมล</b></h3>
+          <div class="label">อีเมล</div>
           <div class="field">
             <p class="control has-icons-left is-primary">
               <input class="input" type="email" placeholder="อีเมล">
@@ -86,8 +87,8 @@
                 </svg><!-- <i class="fas fa-envelope"></i> -->
               </span>
           </div>
-
-          <h3><b>เรื่อง</b></h3>
+          <div class="label">เรื่อง</div>
+         
 
           <div class="select">
             <select>
@@ -105,8 +106,8 @@
       <div class="column is-half">
         <form>
 
-
-          <h3><b>นามสกุล</b></h3>
+<div class="label">นามสกุล</div>
+         
 
           <div calss="field">
             <input class="input" type="text" placeholder="ขื่อ">
@@ -114,7 +115,8 @@
           <h3 class="navbar-item"> </h3>
 
 
-          <h3><b>เบอร์โทรศัพท์</b></h3>
+<div class="label">เบอร์โทรศัพท์</div>
+        
 
           <div calss="field">
             <input class="input" type="text" placeholder="เบอร์โทร">
@@ -139,9 +141,9 @@
 
 <div class="navbar-end">
    
-    <a class="button is-primary is-outlined">ยืนยัน</a>
+    <a class="button is-primary is-inverted is-outlined">ยืนยัน</a>
     <h3 class="navbar-item"> </h3>
-    <a class="button is-outlined">ยกเลิก</a>
+ 
 </div>
 
 
