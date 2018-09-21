@@ -14,10 +14,10 @@
 	background-attachment:fixed;
 }
     </style>
-    
-    
-    
-     <?php		
+
+
+
+     <?php
 	  $check=0;
 	  if (isset($_GET['set'])) {
     					$_SESSION['key']=0;
@@ -39,10 +39,10 @@
 				 if (isset($_GET['hello2'])) {
     					nex();
   				 }
-				 
-				 
-				 
-				 
+
+
+
+
 				  if (isset($_GET['story'])) {
     					story();
   					}
@@ -77,17 +77,17 @@
     					unset($_SESSION['type']);
 						$_SESSION['type']="คำถาม";
 				}
-				
+
 			     $connection= new MongoClient();
- 				 $db= $connection->weblog;
+ 				 $db= $connection->ktonline;
   				 $collection=$db->forum;
 				 $doc=array('username'=>$_SESSION['username']);
  				 $cursor = $collection->find($doc);
 				 $_SESSION['total']=$cursor->count();
 				 $i=$_SESSION['key'];
-				 
+
 				 $j=0;
-				 
+
 				 $listtem[]=array();
 				 $listIDtem[]=array();
 				 $listTypetem[]=array();
@@ -97,7 +97,7 @@
 					 $listTypetem[$j]=$log['doc_type'];
 					 $j++;
 				 }
- 
+
 				 if(isset($_GET['search'])){
 					 $listtem=array();
 					 $listIDtem=array();
@@ -106,7 +106,7 @@
 				 unset($listIDtem);
 				 unset($listTypetem);
 						$_SESSION['key']=0;
-					 
+
 					 echo '   <script type="text/javascript">
 	$(document).ready(function(){
     	$("#p1").empty();
@@ -122,7 +122,7 @@
 		});
 </script>';
 				if(isset($_GET['q'])!=''){//Search
-				
+
 					$j=0;
  					$q=$_GET['q'];
  					$regex=array('name' => new MongoRegex("/$q/i"),
@@ -139,8 +139,8 @@
 					}
 				 }
 
-				 
-				 
+
+
 				 unset($list);
 				 unset($listID);
 				 unset($listType);
@@ -151,8 +151,8 @@
 					 $listType[$t]=$listTypetem[$a];
 					 $t++;
 				 }
-				 
-				 $i=$_SESSION['key'];	
+
+				 $i=$_SESSION['key'];
  	?>
        <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -162,21 +162,21 @@
 	function check(){
 		$(function(){
 			$("#manage").hide();
-		
+
 		});
 	}
 	</script>
-    
-	
-	
-    <?php 
+
+
+
+    <?php
 	session_start();
 			if($_SESSION['status']=='user'){
 			 echo"<script language='javascript'>
 					check();
 			 </script>";
 			}
-	?>    
+	?>
 <title>Weblog</title>
 </head>
 <body>
@@ -184,18 +184,18 @@
   <img  src="31344686_1704141333000568_3657415830821404672_n.png" width="100%" height="200" >
   </div>
  <br>
-   <form name="eiei" method="get"> 
+   <form name="eiei" method="get">
   <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a> 
-&ensp;&ensp;&ensp; 
+  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a>
+&ensp;&ensp;&ensp;
 <a href="userhome.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
 <button type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light">9</span> <span class="sr-only">unread messages</span></button>
 &ensp;&ensp;&ensp;
 <button type="button" class="btn btn-info">Profile</button>
 &ensp;&ensp;&ensp;
 <a href="login.php" class="btn btn-dark">Logout </a>
- 
- 
+
+
   <br>
   <br>
   <br>
@@ -210,7 +210,7 @@
   </center> &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;
 </P>
   <table width="1344" border="0">
-  
+
     <tr>
       <td width="251">
       &ensp;<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script></td>
@@ -247,11 +247,11 @@
       <p>&nbsp;</p>
       <p>&nbsp;</p>
       <p>&nbsp;</p></td>
-      <th width="261" valign="top">&ensp;       
+      <th width="261" valign="top">&ensp;
        <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    	
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script></th>
     </tr>
   </table>
@@ -259,7 +259,7 @@
     <tr>
       <td>&nbsp;</td>
     </tr>
-  </table> 
+  </table>
   </div>
   </body>
 </html>

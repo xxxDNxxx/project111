@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <style type="text/css">
      body {
-	
+
 	background-image:url(1511.jpg);
 	background-size:cover;
 	background-attachment:fixed;
@@ -26,7 +26,7 @@
 		font-family:Verdana, Geneva, sans-serif;
 	}
 	.mar2{
-		
+
 		margin-top:50px;
 		border-style:solid;
 		color:#000;
@@ -40,7 +40,7 @@
 		padding:18px;
 		font-family:Verdana, Geneva, sans-serif;
 		border-radius:20px;
-		
+
 	}
     </style>
    <script
@@ -51,21 +51,21 @@
 	function check(){
 		$(function(){
 			$("#manage").hide();
-		
+
 		});
 	}
 	</script>
-    
-    <?php		
+
+    <?php
 				 session_start();
 			if (isset($_GET['set'])) {
     					$_SESSION['key']=0;
   					}
-			
+
 			 echo"<script language='javascript'>
 					check();
 			 </script>";
-	
+
 	  		    function pre() {
 						if($_SESSION['key']>0){
     						$_SESSION['key']-=10;
@@ -84,15 +84,15 @@
   				 }
 
 			     $connection= new MongoClient();
- 				 $db= $connection->weblog;
+ 				 $db= $connection->ktonline;
   				 $collection=$db->forum;
 				 $doc=array('username'=>$_SESSION['username']);
  				 $cursor = $collection->find($doc);
 				 $_SESSION['total']=$cursor->count();
-				 
-				 
+
+
 				 $j=0;
-				 
+
 				 $listtem[]=array();
 				 $listIDtem[]=array();
 				 $listTypetem[]=array();
@@ -102,13 +102,13 @@
 					 $listTypetem[$j]=$log['doc_type'];
 					 $j++;
 				 }
- 
+
 			if(isset($_GET['search'])){
 				$_SESSION['key']=0;
 					 $list=array();
 					 $listIDtem=array();
 					 $listTypetem=array();
-					 
+
 					 echo '   <script type="text/javascript">
 	$(document).ready(function(){
     	$("#p1").empty();
@@ -139,8 +139,8 @@
 					}
 				 }
 
-				 
-				 
+
+
 				 $list=array();
 				 $listID=array();
 				 $listType=array();
@@ -148,11 +148,11 @@
 				 for($a=$j-1;$a>=0;$a--){
 					 $list[$t]=$listtem[$a];
 					 $listID[$t]=$listIDtem[$a];
-					 $listType[$t]=$listTypetem[$a];	 
+					 $listType[$t]=$listTypetem[$a];
 					 $t++;
 				 }
 				 $i=$_SESSION['key'];
-				 echo $i."   ";		
+				 echo $i."   ";
  	?>
 <title>Weblog</title>
 </head>
@@ -162,11 +162,11 @@
   <img  src="31344686_1704141333000568_3657415830821404672_n.png" width="100%" height="200" >
   </div>
  <br>
-   <form  method="get"> 
+   <form  method="get">
   <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a> 
-  <a href="#" class="btn btn-danger" id="manage" >จัดการ User</a> 
-&ensp;&ensp;&ensp; 
+  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a>
+  <a href="#" class="btn btn-danger" id="manage" >จัดการ User</a>
+&ensp;&ensp;&ensp;
 <a href="user.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
 <button type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light">9</span> <span class="sr-only">unread messages</span></button>
 &ensp;&ensp;&ensp;
@@ -186,20 +186,20 @@
   <tr valign="top">
     <td width="732" height="101" ><table width="200" border="0">
       <tr>
-        <td valign="top" class="btn-warning" style="padding:10px;border-radius:10px;border-style:solid;border-color:#000"> <b> <?php echo "สวัสดี ".$_SESSION['username'];?>  </b>&nbsp;</td>      
-       
+        <td valign="top" class="btn-warning" style="padding:10px;border-radius:10px;border-style:solid;border-color:#000"> <b> <?php echo "สวัสดี ".$_SESSION['username'];?>  </b>&nbsp;</td>
+
 <br>
       </tr>
-             
 
-    </table> 
-    
+
+    </table>
+
    </td>
-    <td width="97"  name="manage" > 
+    <td width="97"  name="manage" >
 	</td>
   </tr>
   <tr>
-  
+
     <td colspan="2"><button type="button" class="btn btn-outline-warning">กระทู้ที่โพสต์</button>
 <button type="button" class="btn btn-outline-danger">กระทู้ที่ติดตาม</button>
 <button type="button" class="btn btn-outline-dark">กระทู้ที่คอมเม้น</button>&nbsp;</td>

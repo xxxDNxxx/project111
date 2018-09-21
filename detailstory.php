@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <style type="text/css">
     body {
-	
+
 	background-image:url(1511.jpg);
 	background-size:cover;
 	background-attachment:fixed;
-	
-	
+
+
 	}
 	.klong{
 		border-style:solid;
@@ -26,7 +26,7 @@
 		margin-bottom:50px;
 		padding:20px;
 		background:#69F;
-		
+
 	}
 	.area{
 		margin-left:280px;
@@ -37,9 +37,9 @@
 
 		session_start();
 		unset( $_SESSION['idforum']);
-		
+
   $connection= new MongoClient();
-  $db= $connection->weblog;
+  $db= $connection->ktonline;
   $collection=$db->forum;
   $cursor = $collection->find();
   $totalrec=$cursor->count();
@@ -55,15 +55,15 @@
 	"contend"=>$_POST['contend'],"username"=>$_SESSION['username'],"like"=>0,"comment"=>0));
 	 $_SESSION['idforum']=$pid;
 	 header('Location:look.php');
-	
+
 	}else{
 		if(isset($_POST['title'])&&isset($_POST['contend'])){
 		 echo "<script type='text/javascript'>alert('กรุณาป้อนข้อมูลให้ครบ!!');</script>";	}
 		}
 
-  
+
 ?>
-    
+
 <title>Weblog</title>
 </head>
 <body>
@@ -71,10 +71,10 @@
   <img  src="31344686_1704141333000568_3657415830821404672_n.png" width="100%" height="200" >
   </div>
  <br>
-   <form  method="post"> 
+   <form  method="post">
   <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a> 
-&ensp;&ensp;&ensp; 
+  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a>
+&ensp;&ensp;&ensp;
 <a href="userhome.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
 <a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo  $_SESSION['num'] ?></span> <span class="sr-only"></span></a>
 &ensp;&ensp;&ensp;
@@ -87,9 +87,9 @@
    <tr>
       <td>&nbsp;</td>
     </tr>
-  </table> 
+  </table>
   </div>
-  <div >            
+  <div >
  <h3 class="table-warning" style="margin-left:240px;width:300px;padding:10px;border-color:#000;border-style:solid;border-radius:10px"> ประเภทกระทู้ : บทความ</h3>
   </div>
 <br>
@@ -103,12 +103,12 @@
   </table>
   <br>
 	<div  style="margin-left:260px" class="input-group-prepend"> <span style="color:#C60" class="input-group-text" ><b>รายละเอียด</b></span> </div>
-  
+
   <p>&nbsp;</p>
     <label for="textfield"></label>
     <textarea style="border-radius:10px;margin:10px;padding:20px;margin-left:260px;width:1000px;height:500px;border-style:solid;border-width:3px;border-color:
   #000"" name="contend"  placeholder="พิมพ์รายละเอียด"></textarea>
-  
+
 <button  type="submit" class="btn btn-primary" style="margin-left:1200px;" onclick="return confirm('Are you sure?')" >ตั้งกระทู้</button>
 
 </form>

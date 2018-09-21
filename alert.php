@@ -9,24 +9,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
      <style type="text/css">
     body {
-	
+
 	background-image:url(1511.jpg);
 	background-size:cover;
 	background-attachment:fixed;
-	
-	
+
+
 	}
 	div{
 		width:700px
-		
+
 	}
 	</style>
      <?php
 
 		session_start();
-		unset( $_SESSION['idforum']);	
+		unset( $_SESSION['idforum']);
   		$connection= new MongoClient();
-  		$db= $connection->weblog;
+  		$db= $connection->ktonline;
   		$collection=$db->alert;
 		$doc=array('forumuser'=>$_SESSION['username']);
 		$cursor = $collection->find($doc);
@@ -38,14 +38,14 @@
 <body>
 
   <img  src="31344686_1704141333000568_3657415830821404672_n.png" width="100%" height="200" >
- 
+
  <br>
   <br>
- 
-   <form  method="get"> 
+
+   <form  method="get">
   <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a> 
-&ensp;&ensp;&ensp; 
+  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a>
+&ensp;&ensp;&ensp;
 <a href="userhome.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
 <a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo $rec ?></span> <span class="sr-only"></span></a>
 &ensp;&ensp;&ensp;
@@ -57,12 +57,12 @@
 <br>
 <br>
 <center>
-<?php 
+<?php
   foreach($cursor as $log){
 	  $user=$log['ucomment'];
 	  $name=$log['nameforum'];
-	  
-	  
+
+
 	  echo "<div  class=\"alert alert-light\" style=\"border:solid 2px #000000\" role=\"alert\"><b><?php echo $user.\" <Comment> \".$name ?></b></div>";
   }
 	$collection->remove(array("forumuser"=>$_SESSION['username']));

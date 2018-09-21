@@ -1,6 +1,6 @@
 <?php
  	$connection= new MongoClient();
-  $db= $connection->weblog;
+  $db= $connection->ktonline;
   $collection=$db->forum;
 //$collection->insert(array("forumname"=>"กล้วยน้ำหว่า","forumid"=>1,"username"=>"chainrocker","type"=>"ข่าว"));
 //$collection->insert(array("username"=>"kachain","forumid"=>17));

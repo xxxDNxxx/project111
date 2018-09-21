@@ -5,10 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Contact</title>
+  <title>ติดต่อเรา</title>
   <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
   <link rel="stylesheet" href="./stylesheet.css">
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <?php
+  $connection = new MongoClient();
+  $db = $connection->ktonline;
+  $collection = $db->contact;
+
+  if(isset($_POST['name'])&&isset($_POST['surname'])){
+    $collection->insert(array("name"=>$_POST['name'],"surname"=>$_POST['surname'],"email"=>$_POST['email'],"problem"=>$_POST['problem'],
+    "tel"=>$_POST['tel'],"descript"=>$_POST['descript']));
+    header('Location:login.php');
+  }
+
+  ?>
 </head>
 
 <body class="bg-primary">
@@ -20,7 +32,7 @@
         <div class="container">
           <div class="navbar-brand">
             <!--  <a class="navbar-item">
-                          <img src="https://www.picz.in.th/images/2018/09/17/f8MP1q.png" alt="Logo"> 
+                          <img src="https://www.picz.in.th/images/2018/09/17/f8MP1q.png" alt="Logo">
                         </a>-->
             <span class="navbar-burger burger" data-target="navbarMenuHeroA">
               <span></span>
@@ -68,18 +80,18 @@
 
 
       <div class="column is-half">
-        <form>
+        <form method="POST">
         <div class="label">ชื่อจริง</div>
-          
+
 
           <div calss="field">
-            <input class="input " type="text" placeholder="ขื่อ">
+            <input class="input " type="text" placeholder="ขื่อ" name="name">
           </div>
           <h3 class="navbar-item"> </h3>
           <div class="label">อีเมล</div>
           <div class="field">
             <p class="control has-icons-left is-primary">
-              <input class="input" type="email" placeholder="อีเมล">
+              <input class="input" type="email" placeholder="อีเมล" name="email">
               <span class="icon is-small is-left">
                 <svg class="svg-inline--fa fa-envelope fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="envelope"
                   role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
@@ -88,10 +100,10 @@
               </span>
           </div>
           <div class="label">เรื่อง</div>
-         
+
 
           <div class="select">
-            <select>
+            <select name="problem">
 
               <option>ปัญหาการใช้งานระบบ</option>
               <option>รายงานความผิดพลาด</option>
@@ -100,32 +112,32 @@
           </div>
 
 
-        </form>
+
       </div>
 
       <div class="column is-half">
-        <form>
+
 
 <div class="label">นามสกุล</div>
-         
+
 
           <div calss="field">
-            <input class="input" type="text" placeholder="ขื่อ">
+            <input class="input" type="text" placeholder="นามสกุล" name="surname" >
           </div>
           <h3 class="navbar-item"> </h3>
 
 
 <div class="label">เบอร์โทรศัพท์</div>
-        
+
 
           <div calss="field">
-            <input class="input" type="text" placeholder="เบอร์โทร">
+            <input class="input" type="text" placeholder="เบอร์โทร" name="tel">
           </div>
 
           <h3 class="navbar-item"> </h3>
 
 
-        </form>
+
       </div>
 
 
@@ -134,18 +146,18 @@
     </div><!-- column -->
 <div class="colums">
 
-<form>
-    <textarea class="textarea" placeholder="รายละเอียด"></textarea>
-</form>
+
+    <textarea class="textarea" placeholder="รายละเอียด" name="descript"></textarea>
+
  <h3 class="navbar-item"> </h3>
 
 <div class="navbar-end">
-   
-    <a class="button is-primary is-inverted is-outlined">ยืนยัน</a>
-    <h3 class="navbar-item"> </h3>
- 
-</div>
 
+    <button type="submit" class="button is-primary is-inverted is-outlined">ยืนยัน</button>
+    <h3 class="navbar-item"> </h3>
+
+</div>
+</form>
 
 </div>
 

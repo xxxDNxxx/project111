@@ -8,26 +8,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <style type="text/css">
     body {
-	
+
 	background-image:url(1511.jpg);
 	background-size:cover;
 	background-attachment:fixed;
-	
+
 
 	 }
 	 input{
 
-		
+
 
 	border:2px solid #d1c7ac;
 	width: 400px;
 	color:#333333;
 	padding:3px;
 	margin-right:4px;
-	
+
 	font-family:tahoma, arial, sans-serif;
-		
-		 
+
+
 	 }
 	 b{
 	margin-right:50px;
@@ -36,12 +36,12 @@
 		 margin:15px;
 		 margin-left:500px;
 	 }
-	 
-	
+
+
     </style>
      <?php
 	  $connection= new MongoClient();
-  $db= $connection->weblog;
+  $db= $connection->ktonline;
   $collection=$db->user;
   	session_start();
 	if(isset($_POST['update2'])){
@@ -49,10 +49,10 @@
 			$collection->update(array("username"=>$_POST['username']),array('$set'=>array("password"=>$_POST['password'],
 			"name"=>$_POST['name'],"email"=>$_POST['email'],"address"=>$_POST['address'],"district"=>$_POST['district'],
 			"province"=>$_POST['province'],"city"=>$_POST['city'],"zipcode"=>$_POST['zipcode'])));
-			
+
 		}
 		}
-	
+
 	 	$doc=array("username"=>$_SESSION['username']);
 		$cursor=$collection->find($doc);
 		foreach($cursor as $log){
@@ -68,12 +68,12 @@
 		$zipcode=$log['zipcode'];
 		$day=$log['dayregister'];
 		}
-		
-		
-		
+
+
+
 
   ?>
-   
+
     <title>Weblog</title>
   </head>
 <body>
@@ -81,15 +81,15 @@
     <br>
 <br>
   <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a> 
-&ensp;&ensp;&ensp; 
+  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a>
+&ensp;&ensp;&ensp;
 <a href="userhome.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
 <a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo  $_SESSION['num'] ?></span> <span class="sr-only"></span></a>
 &ensp;&ensp;&ensp;
 <a href="profile.php" class="btn btn-light">Profile </a>
 &ensp;&ensp;&ensp;
 <a href="login.php" class="btn btn-dark">Logout </a>
- 
+
 <br>
 <br>
 <br>
@@ -98,7 +98,7 @@
 <form method="post">
 <p>
    <b>Username</b>
-     
+
      <input name="username" type="text"  id="username" style="margin-left:10px"  value="<?php echo $user ?>" readonly>
      </p>
      <p>
@@ -131,12 +131,12 @@
   </p>
   <p>
    <b>จังหวัด</b>
-    
+
      <input name="province" type="text"  id="province" style="margin-left:31px" value="<?php echo $province ?>">
      </p>
      <p>
 <b>Zipcode</b>
- 
+
      <input name="zipcode" type="text"  id="zipcode" style="margin-left:18px"  value="<?php echo $zipcode ?>">
      </p>
      <p>
@@ -145,12 +145,12 @@
 </p>
 
   <input style="margin-left:932px; width:100px" type="submit"  class="btn btn-danger"  name="update2" onclick="return confirm('Are you sure?')" value="แก้ไขข้อมูล">
- 
+
 
 </form>
  <br>
   <br>
  <br>
-  
+
   </body>
 </html>
