@@ -25,7 +25,7 @@
 
 <body class="bg-primary">
 
-  <section class="hero is-primary  is-large header-image">
+  <section class="hero is-primary  is-medium header-image">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
@@ -42,6 +42,9 @@
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
 
+          <a class="navbar-item "href="index.php">
+                     หน้าหลัก
+                  </a>
             <div class="navbar-end">
               <a class="navbar-item " href="login.php">
                 เข้าใช้งาน
@@ -64,7 +67,7 @@
 
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
-
+<br><BR><BR>
 
 
 

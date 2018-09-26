@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
     <link rel="stylesheet" href="./stylesheet.css">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-    <?php
+    <?php 
+      session_start();
+     session_destroy();
     $connection = new MongoClient();
     $db = $connection->ktonline;
     $collection = $db->user;
@@ -18,6 +20,7 @@
       foreach($cursor as $log){
         if($_POST['username']==$log['username']&&$_POST['password']==$log['password']){
           session_start();
+      
           $_SESSION['username']=$_POST['username'];
           $_SESSION['status']=$_POST['status'];
 
@@ -31,7 +34,7 @@
 </head>
 <body >
 
-    <section class="hero is-primary  is-fullheight header-image ">
+    <section class="hero is-primary  is-medium header-image ">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
@@ -70,7 +73,9 @@
     </div>
 
     <!-- Hero content: will be in the middle -->
-
+    <div class="hero-body">
+<br><br><br>
+    </div>
 
   </section>
 

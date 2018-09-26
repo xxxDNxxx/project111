@@ -185,14 +185,11 @@
 <body>
 
 
-    <section class="hero is-primary  is-fullheight header-image ">
+    <section class="hero is-primary  is-medium header-image ">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
-        <?php
-        echo $_SESSION['username'];
-
-        ?>
+      
         <div class="container">
           <div class="navbar-brand">
           <!--  <a class="navbar-item">
@@ -205,9 +202,14 @@
             </span>
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
-
+ 
+          <a class="navbar-item is-active"href="index.php">
+                     หน้าหลัก
+                  </a>
             <div class="navbar-end">
-                <a class="navbar-item is-active"href="login.php">
+           
+
+                <a class="navbar-item "href="login.php">
                      เข้าใช้งาน
                   </a>
                   <a class="navbar-item" href="register.php">
@@ -225,7 +227,9 @@
         </div>
       </nav>
     </div>
-
+    <div class="hero-body">
+    <BR>
+    </div>
     <!-- Hero content: will be in the middle -->
     <div class="hero-foot">
     <nav class="tabs">
@@ -240,9 +244,9 @@
           <li><a href="login.php">ออกจากระบบ</a></li>
 
 <div class="navbar-end">
-  <a class="navbar-item">
+ <!-- <a class="navbar-item"> -->
        <li>  <?php echo "ชื่อผู้ใช้"."   ".$_SESSION['username'];?></a></li>
-    </a>
+  <!--  </a> -->
 
 </div>
 

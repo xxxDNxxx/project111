@@ -21,7 +21,7 @@
 </head>
 <body>
 
-    <section class="hero is-primary  is-fullheight header-image">
+    <section class="hero is-primary  is-medium header-image">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
           <nav class="navbar">
@@ -60,7 +60,7 @@
 
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
-
+<br><br><BR>
 
         <!--  <div class="container has-text-centered">
       <h1 class="title">
