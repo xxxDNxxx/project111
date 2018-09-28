@@ -34,7 +34,7 @@
 </head>
 <body >
 
-    <section class="hero is-primary  is-medium header-image">
+    <section class="hero is-primary  is-medium header-image ">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
@@ -51,7 +51,11 @@
             </span>
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
+<div class = "navbar">
+  
+<a class="navbar-item"href="indexx.php">หน้าหลัก</a>
 
+  </div>
             <div class="navbar-end">
                 <a class="navbar-item is-active"href="login.php">
                      เข้าใช้งาน

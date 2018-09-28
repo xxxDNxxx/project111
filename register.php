@@ -8,16 +8,9 @@
   <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
   <link rel="stylesheet" href="./stylesheet.css">
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-  <?php
-    $connection = new MongoClient();
-    $db = $connection->ktonline;
-    $collection = $db->user;
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
-    if(isset($_POST['username'])&&isset($_POST['password'])){
-      $collection->insert(array("username"=>$_POST['username'],"password"=>$_POST['password'],"email"=>$_POST['email'],"sex"=>$_POST['sex'],"status"=>"user"));
-      header('Location:login.php');
-    }
-  ?>
+  
 </head>
 <body>
 
@@ -38,6 +31,7 @@
               </div>
               <div id="navbarMenuHeroA" class="navbar-menu">
 
+<a class="navbar-item"href="indexx.php">หน้าหลัก</a>
                 <div class="navbar-end">
                     <a class="navbar-item " href="login.php">
                          เข้าใช้งาน
@@ -98,7 +92,7 @@
 
           <div class="column bg-columns">
 
-            <form class="eiei bg-columns" method="POST">
+            <form class="eiei bg-columns" method="POST" action="checklog.php">
 
 
                 <div class="label is-large">ลงชื่อเข้าใช้งาน</div>
@@ -155,7 +149,9 @@
                           อื่นๆ
                           </label>
                       </div>
+                      <div class="g-recaptcha" data-sitekey="6Lc25HEUAAAAABGB5cDmoRsg_kNTk3eGVyuIr4ck">
 
+                      </div>
 
 
                     <div class="navbar-end">

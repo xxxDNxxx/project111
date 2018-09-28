@@ -42,6 +42,7 @@
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
 
+<a class="navbar-item"href="indexx.php">หน้าหลัก</a>
             <div class="navbar-end">
               <a class="navbar-item " href="login.php">
                 เข้าใช้งาน
