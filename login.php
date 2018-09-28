@@ -34,7 +34,7 @@
 </head>
 <body >
 
-    <section class="hero is-primary  is-medium header-image ">
+    <section class="hero is-primary  is-medium header-image">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">

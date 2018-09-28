@@ -52,3 +52,16 @@
   .bg-columns{
     background-color: #00d0b1;
   }
+
+  .body-bg {
+
+    background-image: url("https://www.picz.in.th/images/2018/09/27/hdVxQe.png");
+
+  }
+
+  .center {
+    display: block;
+    margin-left: 50%;
+    margin-right: auto;
+    width: 50%;
+}

@@ -179,56 +179,47 @@
     <link rel="stylesheet" href="./stylesheet.css">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 
+<style>
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+  .header-image2 {/*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
+
+/*background-image: url("https://www.picz.in.th/images/2018/09/17/fHdgtW.png"); */
+background-image: url("https://www.picz.in.th/images/2018/09/18/fHTIGu.png");
+/*background-image: url("https://www.picz.in.th/images/2018/09/17/f8MP1q.png"); */
+
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: initial;
+background-size: 100%;
+background-color: rgb(93, 250, 185);
+}
+
+</style>
 
 
 </head>
 <body>
 
 
-    <section class="hero is-primary  is-medium header-image ">
+    <section class="hero is-primary  is-small">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
-      <nav class="navbar">
-      
-        <div class="container">
-          <div class="navbar-brand">
-          <!--  <a class="navbar-item">
-              <img src="https://www.picz.in.th/images/2018/09/17/f8MP1q.png" alt="Logo">
-            </a>-->
-            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <div id="navbarMenuHeroA" class="navbar-menu">
- 
-          <a class="navbar-item is-active"href="index.php">
-                     หน้าหลัก
-                  </a>
-            <div class="navbar-end">
-           
-
-                <a class="navbar-item "href="login.php">
-                     เข้าใช้งาน
-                  </a>
-                  <a class="navbar-item" href="register.php">
-                     สมัครสมาชิก
-                    </a>
-                  <a class="navbar-item" href="contact.php">
-                     ติดต่อเรา
-                    </a>
-            </div>
-
-
-            </div>
-
-          </div>
-        </div>
-      </nav>
+     
+      <img src = "img/trong.png" alt ="logo " width = "30%"  height = "auto" >
     </div>
-    <div class="hero-body">
-    <BR>
+
+
+   
+  
+  
+   
+
     </div>
     <!-- Hero content: will be in the middle -->
     <div class="hero-foot">

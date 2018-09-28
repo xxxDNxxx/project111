@@ -42,9 +42,6 @@
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
 
-          <a class="navbar-item "href="index.php">
-                     หน้าหลัก
-                  </a>
             <div class="navbar-end">
               <a class="navbar-item " href="login.php">
                 เข้าใช้งาน
@@ -75,7 +72,15 @@
 
   </section>
 
-
+<section class= "section ei">
+  <div class = "label">
+    <FONT SIZE =4 >
+      <ul>
+        <li type = disc > ท่านสามารถติดต่อเกี่ยวกับ KT-online.com เพื่อแจ้งปัญหาการใช้งาน, พบเห็นข้อผิดพลาดต่างๆ ในเว็บไซต์ เสนอแนะความคิดเห็นเพื่อปรับปรุงบริการ ได้โดยตรง ผ่านหน้านี้
+</ul>
+      </FONT>
+  </div>
+</section>
 
   <section class="section ei">
 
