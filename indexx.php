@@ -227,7 +227,11 @@ background-color: rgb(93, 250, 185);
 
 
       </div>  
-            <div class="navbar-end">
+
+      <div class = container>
+      
+      
+      <div class="navbar-end">
                 <a class="navbar-item "href="login.php">
                      เข้าใช้งาน
                   </a>
@@ -240,6 +244,8 @@ background-color: rgb(93, 250, 185);
                  
             </div>
 
+
+      </div>
     </nav>
   
 
@@ -247,9 +253,9 @@ background-color: rgb(93, 250, 185);
 
   </section>
 
-<section class="section bg-indexs">
+<section class="section bg-indexs" >
 
-    <form class="bg-index" method="get">
+    <form class="bg-index" method="get" style = "margin-left :20%">
 
   <!--<a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo $_SESSION['num'] ?></span> <span class="sr-only"></span></a>-->
 
@@ -267,7 +273,7 @@ background-color: rgb(93, 250, 185);
           -->
 
   <p>&nbsp;</p>
-  <div style="margin-left:200px">
+  <div style="margin-left:0%">
    <input type="submit" class="button is-primary is-outlined" name="tob10" id="top10" value="10กระทู้ยอดคอมเมนต์สูงสุด" />
    <input type="submit" class="button is-primary is-outlined" name="tob11" id="top11" value="10กระทู้ยอดถูกใจสูงสุด" />
 
@@ -275,11 +281,9 @@ background-color: rgb(93, 250, 185);
 
     <table width="1344" border="0">
 
-      <tr>
-        <td width="236">
-
+      
         &ensp;<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script></td>
-        <td width="735" valign="top">&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;
+        <td width="70%" valign="top">&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;
 
           <div id="p1" class="notification is-primary is-small" role="alert"><a href="lookk.php?set= <?php echo $listID[$i]."\"";?>><?php if(isset($list[$i])) {echo "  <".$listType[$i].">  ".$list[$i];} ?></a></div>
           <div id="p2" class="notification is-primary" role="alert"><a href="lookk.php?set= <?php echo $listID[$i+1]."\"";?>><?php if(isset($list[$i+1])){echo "  <".$listType[$i+1].">  ".$list[$i+1];} ?></a></div>
@@ -291,9 +295,10 @@ background-color: rgb(93, 250, 185);
           <div id="p8" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+7]."\"";?>><?php if(isset($list[$i+7])) {echo "  <".$listType[$i+7].">  ".$list[$i+7];} ?></a></div>
           <div id="p9" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+8]."\"";?>><?php if(isset($list[$i+8])) {echo "  <".$listType[$i+8].">  ".$list[$i+8];} ?></a></div>
         	<div id="p10" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+9]."\"";?>><?php if(isset($list[$i+9])) {echo "  <".$listType[$i+9].">  ".$list[$i+9];} ?></a></div>
-
-        <td width="94" valign="top">&nbsp;</td>
-        <th width="261" valign="top">&ensp;        <!-- Optional JavaScript -->
+        
+          <td width="10%" valign="top"></td>
+        <th width="20%" valign="top"  >&ensp;        <!-- Optional JavaScript -->
+        
           <!-- jQuery first, then Popper.js, then Bootstrap JS -->
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
           <div class="list-group">

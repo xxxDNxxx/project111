@@ -170,7 +170,14 @@
 
 </div>
 
-
+ <footer class="footer bg-indexs">
+    <div class="content has-text-centered">
+      <p>
+    Copyright Katoo Online 2018
+    <p>Contact information: <a href="https://www.google.com/intl/th/gmail/about/#">katoo_admin@gmail.com</a></p>
+      </p>
+    </div>
+  </footer>
   </section>
 
 
