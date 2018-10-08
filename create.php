@@ -56,10 +56,10 @@ background-color: rgb(93, 250, 185);
     <nav class="tabs is-boxed is-fullwidth">
       <div class="container">
         <ul>
-          <li class="is-active">
+          <li >
             <a href= "index.php">หน้าหลัก</a>
           </li>
-          <li><a href="create.php">สร้างกระทู้</a></li>
+          <li class="is-active"><a href="create.php">สร้างกระทู้</a></li>
           <li><a href="userhome.php?set=true">กระทู้ของฉัน</a></li>
          
           <li><a href="profile.php">โปรไฟล์</a></li>

@@ -1,18 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class = "bg-indexs">
   <head>
+ 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <style type="text/css">
-    body {
-	background-image: url(1511.jpg);
-		background-size:cover;
-	background-attachment:fixed;
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
+    <style >
+  
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
+  .header-image2 {/*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
+
+/*background-image: url("https://www.picz.in.th/images/2018/09/17/fHdgtW.png"); */
+background-image: url("https://www.picz.in.th/images/2018/09/18/fHTIGu.png");
+/*background-image: url("https://www.picz.in.th/images/2018/09/17/f8MP1q.png"); */
+
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: initial;
+background-size: 100%;
+background-color: rgb(93, 250, 185);
+}
+
     </style>
 
 
