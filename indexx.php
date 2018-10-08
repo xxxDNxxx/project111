@@ -211,44 +211,25 @@ background-color: rgb(93, 250, 185);
     
     <!-- Hero content: will be in the middle -->
     <div class="hero-foot">
-    <nav class="tabs">
+
+    <nav class="tabs is-boxed is-fullwidth">
       <div class="container">
         <ul>
-          <li class="is-active"><a href="index.php">หน้าหลัก</a></li>
-      <!--    <li><a href="login.php">เข้าสู่ระบบ</a></li> -->
-          <li><a href="login.php">สร้างกระทู้</a></li>
-         <!-- <li><a href="user.php">UserHome</a></li> -->
-          <li><a href="login.php">โปรไฟล์</a></li>
-        
-          <li><a href="login.php">แจ้งเตือน</a></li>
+          <li class="is-active">
+            <a href= "indexx.php">หน้าหลัก</a>
+          </li>
+          <li>
+            <a href = " login.php"> เข้าใช้งาน </a>
+          </li>
+          <li>
+            <a href = " register.php">สมัครสมาชิก</a>
+          </li>
+          <li>
+            <a href = " contact.php">ติดต่อเรา</a>
+          </li>
         </ul>
-
-
-
-
-      </div>  
-
-      <div class = container>
-      
-      
-      <div class="navbar-end">
-                <a class="navbar-item "href="login.php">
-                     เข้าใช้งาน
-                  </a>
-                  <a class="navbar-item" href="register.php">
-                     สมัครสมาชิก
-                    </a>
-                    <a class="navbar-item" href="contact.php">
-                     ติดต่อเรา
-                    </a>
-                 
-            </div>
-
-
       </div>
     </nav>
-  
-
   </div>
 
   </section>
@@ -274,8 +255,8 @@ background-color: rgb(93, 250, 185);
 
   <p>&nbsp;</p>
   <div style="margin-left:0%">
-   <input type="submit" class="button is-primary is-outlined" name="tob10" id="top10" value="10กระทู้ยอดคอมเมนต์สูงสุด" />
-   <input type="submit" class="button is-primary is-outlined" name="tob11" id="top11" value="10กระทู้ยอดถูกใจสูงสุด" />
+   <input type="submit" class="button is-primary is-outlined" name="tob10" id="top10" value="10 กระทู้ยอดคอมเมนต์สูงสุด" />
+   <input type="submit" class="button is-primary is-outlined" name="tob11" id="top11" value="10 กระทู้ยอดถูกใจสูงสุด" />
 
   </div>
 

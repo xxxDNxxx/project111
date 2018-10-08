@@ -179,6 +179,7 @@
     <link rel="stylesheet" href="./stylesheet.css">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 
+
 <style>
 img {
     display: block;
@@ -207,28 +208,22 @@ background-color: rgb(93, 250, 185);
 <body>
 
 
-    <section class="hero is-primary  is-small">
+    <section class="hero is-primary  is-small  ">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
-     
       <img src = "img/trong.png" alt ="logo " width = "30%"  height = "auto" >
     </div>
 
-
-   
-  
-  
-   
-
-    </div>
-    <!-- Hero content: will be in the middle -->
+        <!-- Hero content: will be in the middle -->
     <div class="hero-foot">
-    <nav class="tabs">
+      
+    <nav class="tabs is-boxed is-fullwidth">
       <div class="container">
         <ul>
-          <li class="is-active"><a href="index.php">หน้าหลัก</a></li>
+          <li class="is-active">
+            <a href= "indexx.php">หน้าหลัก</a>
+          </li>
           <li><a href="create.php">สร้างกระทู้</a></li>
-         <!-- <li><a href="user.php">UserHome</a></li> -->
           <li><a href="profile.php">โปรไฟล์</a></li>
           <li><a href="alert.php">แจ้งเตือน</a></li>
 
@@ -236,16 +231,14 @@ background-color: rgb(93, 250, 185);
 
 <div class="navbar-end">
  <!-- <a class="navbar-item"> -->
-       <li>  <?php echo "ชื่อผู้ใช้"."   ".$_SESSION['username'];?></a></li>
+       <li>  <?php echo "ชื่อผู้ใช้"."   ".$_SESSION['username'];?></li>
   <!--  </a> -->
+
+
 
 </div>
 
         </ul>
-
-
-
-
       </div>
     </nav>
   </div>
