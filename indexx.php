@@ -236,92 +236,93 @@ background-color: rgb(93, 250, 185);
 
 <section class="section bg-indexs" >
 
-    <form class="bg-index" method="get" style = "margin-left :20%">
+<div class = " container ">
 
-  <!--<a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo $_SESSION['num'] ?></span> <span class="sr-only"></span></a>-->
 
-   </P>
+    <form class="bg-index" method="get" style = "margin-left :0%">
 
-    <br>
-    <br>
+<!--<a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo $_SESSION['num'] ?></span> <span class="sr-only"></span></a>-->
 
-    <!--
-    <center >
-    <label  for="q"></label><b style="color:#F00;">ค้นหาข้อมูล</b>
-    <input type="text" name="q" id="q"  />
-    <input type="submit" class="btn btn-light" name="search" id="search" value="ค้นหา" />
-    </center>
-          -->
+ </P>
 
-  <p>&nbsp;</p>
-  <div style="margin-left:0%">
-   <input type="submit" class="button is-primary is-outlined" name="tob10" id="top10" value="10 กระทู้ยอดคอมเมนต์สูงสุด" />
-   <input type="submit" class="button is-primary is-outlined" name="tob11" id="top11" value="10 กระทู้ยอดถูกใจสูงสุด" />
+  <br>
+  <br>
 
-  </div>
+  <!--
+  <center >
+  <label  for="q"></label><b style="color:#F00;">ค้นหาข้อมูล</b>
+  <input type="text" name="q" id="q"  />
+  <input type="submit" class="btn btn-light" name="search" id="search" value="ค้นหา" />
+  </center>
+        -->
 
-    <table width="1344" border="0">
+<p>&nbsp;</p>
+<div style="margin-left:0%">
+ <input type="submit" class="button is-primary is-outlined" name="tob10" id="top10" value="10 กระทู้ยอดคอมเมนต์สูงสุด" />
+ <input type="submit" class="button is-primary is-outlined" name="tob11" id="top11" value="10 กระทู้ยอดถูกใจสูงสุด" />
 
+</div>
+
+  <table width="100%" border="0">
+
+    
+      &ensp;<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script></td>
+      <td width="70%" valign="top">&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;
+
+        <div id="p1" class="notification is-primary is-small" role="alert"><a href="lookk.php?set= <?php echo $listID[$i]."\"";?>><?php if(isset($list[$i])) {echo "  <".$listType[$i].">  ".$list[$i];} ?></a></div>
+        <div id="p2" class="notification is-primary" role="alert"><a href="lookk.php?set= <?php echo $listID[$i+1]."\"";?>><?php if(isset($list[$i+1])){echo "  <".$listType[$i+1].">  ".$list[$i+1];} ?></a></div>
+        <div id="p3" class="notification is-primary" role="alert"><a href="lookk.php?set= <?php echo $listID[$i+2]."\"";?>><?php if(isset($list[$i+2])){echo "  <".$listType[$i+2].">  ".$list[$i+2];} ?></a></div>
+        <div id="p4" class="notification is-primary role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+3]."\"";?>><?php if(isset($list[$i+3])) {echo "  <".$listType[$i+3].">  ".$list[$i+3];} ?></a></div>
+        <div id="p5" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+4]."\"";?>><?php if(isset($list[$i+4])) {echo "  <".$listType[$i+4].">  ".$list[$i+4];} ?></a></div>
+        <div id="p6" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+5]."\"";?>><?php if(isset($list[$i+5])) {echo "  <".$listType[$i+5].">  ".$list[$i+5];} ?> </a></div>
+        <div id="p7" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+6]."\"";?>><?php if(isset($list[$i+6])) {echo "  <".$listType[$i+6].">  ".$list[$i+6];} ?></a></div>
+        <div id="p8" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+7]."\"";?>><?php if(isset($list[$i+7])) {echo "  <".$listType[$i+7].">  ".$list[$i+7];} ?></a></div>
+        <div id="p9" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+8]."\"";?>><?php if(isset($list[$i+8])) {echo "  <".$listType[$i+8].">  ".$list[$i+8];} ?></a></div>
+        <div id="p10" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+9]."\"";?>><?php if(isset($list[$i+9])) {echo "  <".$listType[$i+9].">  ".$list[$i+9];} ?></a></div>
       
-        &ensp;<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script></td>
-        <td width="70%" valign="top">&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;
+        <td width="10%" valign="top"></td>
+      <th width="20%" valign="top"  >&ensp;        <!-- Optional JavaScript -->
+      
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <div class="list-group">
+          <p><h3 class="navi" style="padding:10px;border-radius:10px;border-style:solid;border-color:#00d0b1;"> ประเภทกระทู้ </h3></p>
+          <h3 class="navbar-item">     </h3>
+          <p><a href="select.php?story=true" class="list-group-item list-group-item-action">บทความ</a>            </p>
+          <h3 class="navbar-item">     </h3>
+          <p><a href="select.php?news=true" class="list-group-item list-group-item-action">ข่าว</a>            </p>
+          <h3 class="navbar-item">     </h3>
+          <p><a href="select.php?que=true" class="list-group-item list-group-item-action">คำถาม</a>            </p>
+          <h3 class="navbar-item">     </h3>
+          <p><a href="select.php?review=true" class="list-group-item list-group-item-action ">รีวิว</a></p>
+          <h3 class="navbar-item">     </h3>
+          <p> <a href="select.php?store=true" class="list-group-item list-group-item-action " >ขายของ</a> </p></div>
+         </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script></th>
+    </tr>
+  </table>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br> <br>
+  <br>
+  <br>
 
-          <div id="p1" class="notification is-primary is-small" role="alert"><a href="lookk.php?set= <?php echo $listID[$i]."\"";?>><?php if(isset($list[$i])) {echo "  <".$listType[$i].">  ".$list[$i];} ?></a></div>
-          <div id="p2" class="notification is-primary" role="alert"><a href="lookk.php?set= <?php echo $listID[$i+1]."\"";?>><?php if(isset($list[$i+1])){echo "  <".$listType[$i+1].">  ".$list[$i+1];} ?></a></div>
-          <div id="p3" class="notification is-primary" role="alert"><a href="lookk.php?set= <?php echo $listID[$i+2]."\"";?>><?php if(isset($list[$i+2])){echo "  <".$listType[$i+2].">  ".$list[$i+2];} ?></a></div>
-          <div id="p4" class="notification is-primary role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+3]."\"";?>><?php if(isset($list[$i+3])) {echo "  <".$listType[$i+3].">  ".$list[$i+3];} ?></a></div>
-          <div id="p5" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+4]."\"";?>><?php if(isset($list[$i+4])) {echo "  <".$listType[$i+4].">  ".$list[$i+4];} ?></a></div>
-          <div id="p6" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+5]."\"";?>><?php if(isset($list[$i+5])) {echo "  <".$listType[$i+5].">  ".$list[$i+5];} ?> </a></div>
-          <div id="p7" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+6]."\"";?>><?php if(isset($list[$i+6])) {echo "  <".$listType[$i+6].">  ".$list[$i+6];} ?></a></div>
-          <div id="p8" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+7]."\"";?>><?php if(isset($list[$i+7])) {echo "  <".$listType[$i+7].">  ".$list[$i+7];} ?></a></div>
-          <div id="p9" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+8]."\"";?>><?php if(isset($list[$i+8])) {echo "  <".$listType[$i+8].">  ".$list[$i+8];} ?></a></div>
-        	<div id="p10" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+9]."\"";?>><?php if(isset($list[$i+9])) {echo "  <".$listType[$i+9].">  ".$list[$i+9];} ?></a></div>
-        
-          <td width="10%" valign="top"></td>
-        <th width="20%" valign="top"  >&ensp;        <!-- Optional JavaScript -->
-        
-          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-          <div class="list-group">
-            <p><h3 class="navi" style="padding:10px;border-radius:10px;border-style:solid;border-color:#00d0b1;"> ประเภทกระทู้ </h3></p>
-            <h3 class="navbar-item">     </h3>
-            <p><a href="select.php?story=true" class="list-group-item list-group-item-action">บทความ</a>            </p>
-            <h3 class="navbar-item">     </h3>
-            <p><a href="select.php?news=true" class="list-group-item list-group-item-action">ข่าว</a>            </p>
-            <h3 class="navbar-item">     </h3>
-            <p><a href="select.php?que=true" class="list-group-item list-group-item-action">คำถาม</a>            </p>
-            <h3 class="navbar-item">     </h3>
-            <p><a href="select.php?review=true" class="list-group-item list-group-item-action ">รีวิว</a></p>
-            <h3 class="navbar-item">     </h3>
-            <p> <a href="select.php?store=true" class="list-group-item list-group-item-action " >ขายของ</a> </p></div>
-           </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script></th>
-      </tr>
-    </table>
-    <table width="200" border="0" align="right">
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-    </table>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> <br>
-    <br>
-    <br>
+</form>
 
-  </form>
+<footer class="footer bg-indexs">
+  <div class="content has-text-centered">
+    <p>
+  Copyright Katoo Online 2018
+  <p>Contact information: <a href="https://www.google.com/intl/th/gmail/about/#">katoo_admin@gmail.com</a></p>
+    </p>
+  </div>
+</footer>
 
-  <footer class="footer bg-indexs">
-    <div class="content has-text-centered">
-      <p>
-    Copyright Katoo Online 2018
-    <p>Contact information: <a href="https://www.google.com/intl/th/gmail/about/#">katoo_admin@gmail.com</a></p>
-      </p>
-    </div>
-  </footer>
+</div>
+
 </section>
 
 </body>
