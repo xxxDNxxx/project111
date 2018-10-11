@@ -149,12 +149,12 @@
                           อื่นๆ
                           </label>
                       </div>
-                      <div class="g-recaptcha" data-sitekey="6Lc25HEUAAAAABGB5cDmoRsg_kNTk3eGVyuIr4ck">
-
+                      
+                      <div class = "navbar-end">
+                      <div class="g-recaptcha" data-sitekey="6Lc25HEUAAAAABGB5cDmoRsg_kNTk3eGVyuIr4ck"></div>
                       </div>
-
-
                     <div class="navbar-end">
+                    
                         <button type="submit" class="button is-primary is-inverted is-outlined">
                             <span class="icon">
                               <img src="./img/regis.png">

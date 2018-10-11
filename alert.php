@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class = " bg-indexs">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,19 +7,36 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	 
+	 <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
      <style type="text/css">
-    body {
+   
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-	background-image:url(1511.jpg);
-	background-size:cover;
-	background-attachment:fixed;
+
+  .header-image2 {/*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
+
+/*background-image: url("https://www.picz.in.th/images/2018/09/17/fHdgtW.png"); */
+background-image: url("https://www.picz.in.th/images/2018/09/18/fHTIGu.png");
+/*background-image: url("https://www.picz.in.th/images/2018/09/17/f8MP1q.png"); */
+
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: initial;
+background-size: 100%;
+background-color: rgb(93, 250, 185);
+}
 
 
-	}
-	div{
-		width:700px
-
-	}
 	</style>
      <?php
 
@@ -33,50 +50,87 @@
 		$rec=$cursor->count();
 
 ?>
-<title>Weblog</title>
+<title>KATOO - TELL YOUR STORY</title>
 </head>
-<body>
+<body class = "bg-indexs">
+<section class="hero is-primary  is-small  ">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <img src = "img/trong.png" alt ="logo " width = "30%"  height = "auto" >
+    </div>
 
-  <img  src="31344686_1704141333000568_3657415830821404672_n.png" width="100%" height="200" >
+        <!-- Hero content: will be in the middle -->
+    <div class="hero-foot">
+      
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li >
+            <a href= "index.php">หน้าหลัก</a>
+          </li>
+          <li ><a href="create.php">สร้างกระทู้</a></li>
+          <li><a href="userhome.php?set=true">กระทู้ของฉัน</a></li>
+         
+          <li><a href="profile.php">โปรไฟล์</a></li>
+          <li class="is-active"><a href="alert.php">แจ้งเตือน</a></li>
 
- <br>
-  <br>
+          <li><a href="login.php">ออกจากระบบ</a></li>
 
-   <form  method="get">
-  <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a>
-&ensp;&ensp;&ensp;
-<a href="userhome.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
-<a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo $rec ?></span> <span class="sr-only"></span></a>
-&ensp;&ensp;&ensp;
-<a href="profile.php" class="btn btn-light">Profile </a>
-&ensp;&ensp;&ensp;
-<a href="login.php" class="btn btn-dark">Logout </a></P>
-<p>&nbsp;</p>
-<center><h2 style="font-family:'Arial Black', Gadget, sans-serif;color:#000;padding:8px;border:2px solid #F00;border-radius:10px;width:270px;background-color:#0F6">แจ้งเตือน</h2></center>
-<br>
-<br>
-<center>
-<?php
-  foreach($cursor as $log){
-	  $user=$log['ucomment'];
-	  $name=$log['nameforum'];
+<div class="navbar-end">
+ <!-- <a class="navbar-item"> -->
+       <li>  <?php echo "ชื่อผู้ใช้"."   ".$_SESSION['username'];?></li>
+  <!--  </a> -->
 
 
-	  echo "<div  class=\"alert alert-light\" style=\"border:solid 2px #000000\" role=\"alert\"><b><?php echo $user.\" <Comment> \".$name ?></b></div>";
-  }
-	$collection->remove(array("forumuser"=>$_SESSION['username']));
-	$_SESSION['num']=0;
-?>
 
-</center>
+</div>
 
-</form>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  </section>
+
+  <section class = "section">
+  
+  <div class = " container ">
+  
+  
+
+   <form  method="get" style = "margin-top : 3%">
+ 
+ <?php
+   foreach($cursor as $log){
+	   $user=$log['ucomment'];
+	   $name=$log['nameforum'];
+ 
+ 
+	   echo "<div  class=\"notification is-primary is-small\"  role=\"alert\"><b><?php echo $user.\" <Comment>  $name </b></div>";
+   }
+	// $collection->remove(array("forumuser"=>$_SESSION['username']));
+	 $_SESSION['num']=0;
+ ?>
+ 
+ </center>
+ 
+ </form>
+ 
+
+  </div>
+  
+  </section>
+<section class = " section bg-index">
+
+<footer class="footer bg-indexs">
+  <div class="content has-text-centered">
+    <p>
+  Copyright Katoo Online 2018
+  <p>Contact information: <a href="https://www.google.com/intl/th/gmail/about/#">katoo_admin@gmail.com</a></p>
+    </p>
+  </div>
+</footer>
+</section>
+
 </body>
 </html>

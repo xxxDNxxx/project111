@@ -247,6 +247,7 @@ background-color: rgb(93, 250, 185);
   </div>
 
   </section>
+ 
 
 
 <section class="section bg-indexs" >
@@ -287,7 +288,7 @@ background-color: rgb(93, 250, 185);
         <div id="p1" class="notification is-primary is-small" role="alert"><a href="lookk.php?set= <?php echo $listID[$i]."\"";?>><?php if(isset($list[$i])) {echo "  <".$listType[$i].">  ".$list[$i];} ?></a></div>
         <div id="p2" class="notification is-primary" role="alert"><a href="lookk.php?set= <?php echo $listID[$i+1]."\"";?>><?php if(isset($list[$i+1])){echo "  <".$listType[$i+1].">  ".$list[$i+1];} ?></a></div>
         <div id="p3" class="notification is-primary" role="alert"><a href="lookk.php?set= <?php echo $listID[$i+2]."\"";?>><?php if(isset($list[$i+2])){echo "  <".$listType[$i+2].">  ".$list[$i+2];} ?></a></div>
-        <div id="p4" class="notification is-primary role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+3]."\"";?>><?php if(isset($list[$i+3])) {echo "  <".$listType[$i+3].">  ".$list[$i+3];} ?></a></div>
+        <div id="p4" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+3]."\"";?>><?php if(isset($list[$i+3])) {echo "  <".$listType[$i+3].">  ".$list[$i+3];} ?></a></div>
         <div id="p5" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+4]."\"";?>><?php if(isset($list[$i+4])) {echo "  <".$listType[$i+4].">  ".$list[$i+4];} ?></a></div>
         <div id="p6" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+5]."\"";?>><?php if(isset($list[$i+5])) {echo "  <".$listType[$i+5].">  ".$list[$i+5];} ?> </a></div>
         <div id="p7" class="notification is-primary" role="alert"> <a href="lookk.php?set= <?php echo $listID[$i+6]."\"";?>><?php if(isset($list[$i+6])) {echo "  <".$listType[$i+6].">  ".$list[$i+6];} ?></a></div>

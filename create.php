@@ -41,7 +41,7 @@ background-color: rgb(93, 250, 185);
 
     </style>
 
-<title>Weblog</title>
+<title>KATOO - TELL YOUR STORY</title>
 </head>
 <body class = "bg-indexs">
 <section class="hero is-primary  is-small  ">
@@ -110,11 +110,11 @@ background-color: rgb(93, 250, 185);
       <div class="tile is-parent ">
           <article class="tile is-child">
 
-              <p class="title">
+              <p class="title" style = "text-align : center">
                   บทความ
                 </p>
               <figure class="image is-128x128 ">
-                <a href = "detailstory.php">   <img src="type-20180426T121636Z-001/type/blog.png"> </a>
+                <a href = "detailstory.php">   <img src="type-20180426T121636Z-001/type/blog.png" style = "margin-left: 30%;"> </a>
                 </figure>
 
           </article>
@@ -127,11 +127,11 @@ background-color: rgb(93, 250, 185);
         <div class="tile is-parent ">
             <article class="tile is-child ">
   
-                <p class="title">
+                <p class="title" style = "text-align : center">
                     ข่าว
                   </p>
                 <figure class="image is-128x128">
-                <a href = "detailnews.php">   <img src="type-20180426T121636Z-001/type/news.png"> </a>
+                <a href = "detailnews.php">   <img src="type-20180426T121636Z-001/type/news.png" style = "margin-left: 30%;"> </a>
                   </figure>
 
             </article>
@@ -144,11 +144,11 @@ background-color: rgb(93, 250, 185);
           <div class="tile is-parent ">
               <article class="tile is-child ">
     
-                  <p class="title">
+                  <p class="title" style = "text-align : center">
                       คำถาม
                     </p>
                   <figure class="image is-128x128">
-                  <a href = "detailque.php">   <img src=" type-20180426T121636Z-001/type/quaion.png"> </a>
+                  <a href = "detailque.php">   <img src=" type-20180426T121636Z-001/type/quaion.png" style = "margin-left: 30%;"> </a>
                 </figure>
   
               </article>
@@ -160,11 +160,11 @@ background-color: rgb(93, 250, 185);
             
           <div class="tile is-parent ">
               <article class="tile is-child ">
-                  <p class="title">
+                  <p class="title" style = "text-align : center">
                       รีวิว
                     </p>
                   <figure class="image is-128x128">
-                  <a href = "detailreview.php">   <img src="type-20180426T121636Z-001/type/review.png"> </a>
+                  <a href = "detailreview.php">   <img src="type-20180426T121636Z-001/type/review.png" style = "margin-left: 30%;"> </a>
               </figure>
   
               </article>
@@ -177,11 +177,11 @@ background-color: rgb(93, 250, 185);
             
           <div class="tile is-parent ">
               <article class="tile is-child ">
-                  <p class="title">
+                  <p class="title" style = "text-align : center">
                       ขายของ
                     </p>
                   <figure class="image is-128x128">
-                  <a href = "detailstore.php">   <img src="type-20180426T121636Z-001/type/shop.png"> </a>
+                  <a href = "detailstore.php">   <img src="type-20180426T121636Z-001/type/shop.png" style = "margin-left: 30%;"> </a>
               </figure>
   
               </article>

@@ -1,24 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class = "bg-indexs">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
     <style type="text/css">
-    body {
+    
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-	background-image:url(1511.jpg);
-	background-size:cover;
-	background-attachment:fixed;
+
+  .header-image2 {/*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
+
+/*background-image: url("https://www.picz.in.th/images/2018/09/17/fHdgtW.png"); */
+background-image: url("https://www.picz.in.th/images/2018/09/18/fHTIGu.png");
+/*background-image: url("https://www.picz.in.th/images/2018/09/17/f8MP1q.png"); */
+
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: initial;
+background-size: 100%;
+background-color: rgb(93, 250, 185);
+}
 
 
-	 }
 	 input{
-
-
-
 	border:2px solid #d1c7ac;
 	width: 400px;
 	color:#333333;
@@ -29,13 +46,7 @@
 
 
 	 }
-	 b{
-	margin-right:50px;
-	 }
-	 p{
-		 margin:15px;
-		 margin-left:500px;
-	 }
+	
 
 
     </style>
@@ -58,15 +69,9 @@
 		foreach($cursor as $log){
 		$user=$log['username'];
 		$password=$log['password'];
-		$name=$log['name'];
 		$email=$log['email'];
-		$address=$log['address'];
-		$district=$log['district'];
-		$gender=$log['gender'];
-		$province=$log['province'];
-		$city=$log['city'];
-		$zipcode=$log['zipcode'];
-		$day=$log['dayregister'];
+		//$gender=$log['gender'];
+		//$day=$log['dayregister'];
 		}
 
 
@@ -74,83 +79,122 @@
 
   ?>
 
-    <title>Weblog</title>
+    <title>KATOO - TELL YOUR STORY</title>
   </head>
-<body>
-    <img  src="31344686_1704141333000568_3657415830821404672_n.png" >
-    <br>
-<br>
-  <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a>
-&ensp;&ensp;&ensp;
-<a href="userhome.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
-<a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo  $_SESSION['num'] ?></span> <span class="sr-only"></span></a>
-&ensp;&ensp;&ensp;
-<a href="profile.php" class="btn btn-light">Profile </a>
-&ensp;&ensp;&ensp;
-<a href="login.php" class="btn btn-dark">Logout </a>
+<body class = "bg-indexs">
+<section class="hero is-primary  is-small  ">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <img src = "img/trong.png" alt ="logo " width = "30%"  height = "auto" >
+    </div>
 
-<br>
-<br>
-<br>
+        <!-- Hero content: will be in the middle -->
+    <div class="hero-foot">
+      
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li >
+            <a href= "index.php">หน้าหลัก</a>
+          </li>
+          <li ><a href="create.php">สร้างกระทู้</a></li>
+          <li><a href="userhome.php?set=true">กระทู้ของฉัน</a></li>
+         
+          <li class="is-active"><a href="profile.php">โปรไฟล์</a></li>
+          <li><a href="alert.php">แจ้งเตือน</a></li>
+
+          <li><a href="login.php">ออกจากระบบ</a></li>
+
+<div class="navbar-end">
+ <!-- <a class="navbar-item"> -->
+       <li>  <?php echo "ชื่อผู้ใช้"."   ".$_SESSION['username'];?></li>
+  <!--  </a> -->
 
 
-<form method="post">
+
+</div>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  </section>
+
+<section class="section">
+<div class = "container">
+<div class = "columns">
+
+<form method="post" style = "margin-left : 33%">
+
+<div class = "column">
 <p>
-   <b>Username</b>
-
+   <b>ชื่อผู้ใช้</b>
      <input name="username" type="text"  id="username" style="margin-left:10px"  value="<?php echo $user ?>" readonly>
      </p>
+</div>
+
+<div class = "column">
      <p>
- <b>password</b>
+ <b>รหัสผ่าน</b>
     <input name="password"type="password"  id="password" style="margin-left:11px" value="<?php echo $password ?>">
     </p>
+
+</div>
+
+
+<div class = "column">
+
     <p>
-  <b>ชื่อ</b>
-    <input name="name" type="text"  id="name" style="margin-left:60px" value="<?php echo $name ?>">
-   </p>
-   <p>
   <b>เพศ</b>
   <input name="gender" type="text"  id="gender" style="margin-left:51px" value="<?php echo $gender ?>">
 	     </p>
+
+</div>
+
+
+<div class = "column">
+
+
          <p>
-   <b>Email</b>
+   <b>อีเมล</b>
       <input name="email" type="email"  id="email" style="margin-left:40px" value="<?php echo $email ?>">
       </p>
+</div>
+
+
+
+<div class = "column">
+
       <p>
-  <b>Address</b>
-     <input name="address" type="text"  id="address" style="margin-left:20px"  value="<?php echo $address ?>">
-     </p>
-     <p>
-  <b>ตำบล</b>
-   <input name="city" type="text"  id="city" style="margin-left:40px" value="<?php echo $city ?>">
-   </p>
-   <p>
-  <b>อำเภอ</b>
-     <input name="district" type="text"  id="district" style="margin-left:35px" value="<?php echo $district ?>">
-  </p>
-  <p>
-   <b>จังหวัด</b>
-
-     <input name="province" type="text"  id="province" style="margin-left:31px" value="<?php echo $province ?>">
-     </p>
-     <p>
-<b>Zipcode</b>
-
-     <input name="zipcode" type="text"  id="zipcode" style="margin-left:18px"  value="<?php echo $zipcode ?>">
-     </p>
-     <p>
 <b>วันที่สมัคร</b>
  <input name="day" type="text"  id="day" style="margin-left:8px" value="<?php echo $day ?>" readonly>
 </p>
 
-  <input style="margin-left:932px; width:100px" type="submit"  class="btn btn-danger"  name="update2" onclick="return confirm('Are you sure?')" value="แก้ไขข้อมูล">
+</div>
+
+<br>
+  <input style="margin-left: 40%; width:100px" type="submit"  class="button is-primary is-outlined"  name="update2" onclick="return confirm('Are you sure?')" value="แก้ไขข้อมูล">
 
 
 </form>
- <br>
-  <br>
- <br>
+</div>
 
+</div>
+
+
+</section>
+ 
+ <section class = "section">
+ 
+<footer class="footer bg-indexs">
+  <div class="content has-text-centered">
+    <p>
+  Copyright Katoo Online 2018
+  <p>Contact information: <a href="https://www.google.com/intl/th/gmail/about/#">katoo_admin@gmail.com</a></p>
+    </p>
+  </div>
+</footer>
+ </section>
   </body>
 </html>

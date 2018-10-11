@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class = "bg-indexs">
+<html lang="en" class = "" >
   <head>
  
     <!-- Required meta tags -->
@@ -265,109 +265,132 @@ background-color: rgb(93, 250, 185);
 			 </script>";
 			}
 	?>
-<title>Weblog</title>
+<title>KATOO - TELL YOUR STORY</title>
 </head>
-<body>
-<div align="center">
-  <img  src="31344686_1704141333000568_3657415830821404672_n.png" width="100%" height="200" >
+<body class = "bg-indexs">
+
+
+<section class="hero is-primary  is-small  ">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <img src = "img/trong.png" alt ="logo " width = "30%"  height = "auto" >
+    </div>
+
+        <!-- Hero content: will be in the middle -->
+    <div class="hero-foot">
+      
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li >
+            <a href= "index.php">หน้าหลัก</a>
+          </li>
+          <li ><a href="create.php">สร้างกระทู้</a></li>
+          <li class="is-active"><a href="userhome.php?set=true">กระทู้ของฉัน</a></li>
+         
+          <li ><a href="profile.php">โปรไฟล์</a></li>
+          <li><a href="alert.php">แจ้งเตือน</a></li>
+
+          <li><a href="login.php">ออกจากระบบ</a></li>
+
+<div class="navbar-end">
+ <!-- <a class="navbar-item"> -->
+       <li>  <?php echo "ชื่อผู้ใช้"."   ".$_SESSION['username'];?></li>
+  <!--  </a> -->
+
+
+
+</div>
+
+        </ul>
+      </div>
+    </nav>
   </div>
- <br>
-   <form name="eiei" method="get">
-  <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a>
-&ensp;&ensp;&ensp;
-<a href="userhome.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
-<a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo  $_SESSION['num'] ?></span> <span class="sr-only"></span></a>
-&ensp;&ensp;&ensp;
-<a href="profile.php" class="btn btn-light">Profile </a>
-&ensp;&ensp;&ensp;
-<a href="login.php" class="btn btn-dark">Logout </a>
+
+  </section>
+
+<section class = " section">
+<br><br>
+<div class = " container">
 
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <h2 class="btn-light" style="padding:10px;border-radius:10px;border-style:solid;border-color:#000;margin-left:200px;margin-right:500px"><?php echo "สวัสดี : ".$_SESSION['username']?></h2>
-  <br>
-  <br>
-  <center >
-  <label  for="q"></label><b style="color:#F00;">ค้นหาข้อมูล</b>
-  <input type="text" name="q" id="q"  />
-  <input type="submit" class="btn btn-light" name="search" id="search" value="ค้นหา" />
-  </center> &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;
-</P>
-  <table width="1200" border="0">
 
-    <tr>
-      <td width="251">
-      &ensp;<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script></td>
-      <td width="744" valign="top">&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;
-       <div id="p1"  class="alert alert-primary" role="alert"><a href="look.php?set= <?php echo $listID[$i]."\"";?>><?php if(isset($list[$i])) {echo "  <".$listType[$i].">  ".$list[$i];} ?></a></div>
-        <div id="p2" class="alert alert-secondary" role="alert"> <a href="look.php?set= <?php echo $listID[$i+1]."\"";?>><?php if(isset($list[$i+1])){echo "  <".$listType[$i+1].">  ".$list[$i+1];} ?></a></div>
-        <div id="p3" class="alert alert-success" role="alert"><a href="look.php?set= <?php echo $listID[$i+2]."\"";?>><?php if(isset($list[$i+2])){echo "  <".$listType[$i+2].">  ".$list[$i+2];} ?></a></div>
-        <div id="p4" class="alert alert-danger" role="alert"> <a href="look.php?set= <?php echo $listID[$i+3]."\"";?>><?php if(isset($list[$i+3])) {echo "  <".$listType[$i+3].">  ".$list[$i+3];} ?></a></div>
-        <div id="p5" class="alert alert-warning" role="alert"> <a href="look.php?set= <?php echo $listID[$i+4]."\"";?>><?php if(isset($list[$i+4])) {echo "  <".$listType[$i+4].">  ".$list[$i+4];} ?></a></div>
-        <div id="p6" class="alert alert-info" role="alert"> <a href="look.php?set= <?php echo $listID[$i+5]."\"";?>><?php if(isset($list[$i+5])) {echo "  <".$listType[$i+5].">  ".$list[$i+5];} ?> </a></div>
-        <div id="p7" class="alert alert-light" role="alert"> <a href="look.php?set= <?php echo $listID[$i+6]."\"";?>><?php if(isset($list[$i+6])) {echo "  <".$listType[$i+6].">  ".$list[$i+6];} ?></a></div>
-        <div id="p8" class="alert alert-dark" role="alert"> <a href="look.php?set= <?php echo $listID[$i+7]."\"";?>><?php if(isset($list[$i+7])) {echo "  <".$listType[$i+7].">  ".$list[$i+7];} ?></a></div>
-        <div id="p9" class="alert alert-secondary" role="alert"> <a href="look.php?set= <?php echo $listID[$i+8]."\"";?>><?php if(isset($list[$i+8])) {echo "  <".$listType[$i+8].">  ".$list[$i+8];} ?></a></div>
-      	<div id="p10" class="alert alert-success" role="alert"> <a href="look.php?set= <?php echo $listID[$i+9]."\"";?>><?php if(isset($list[$i+9])) {echo "  <".$listType[$i+9].">  ".$list[$i+9];} ?></a></div>
-        </div>
-        <td valign="top" width="150"> <div class="list-group">
-
-         </td>
-         <td valign="top" width="150"> <div class="list-group">
-          <p ><h3 align="center" class="btn-warning" style="padding:10px;border-radius:10px;border-style:solid;border-color:#000"> เมนู </h3></p>
-          <p><input type="submit" class="btn btn-light" name="topost" id="topost" value="กระทู้ที่โพส" />           </p>
-          <p><input type="submit" class="btn btn-light" name="tofollow" id="tofollow" value="กระทู้ที่ติดตาม" />           </p>
-          <p><a href="admin.php" id="manage" class="list-group-item list-group-item-action ">จัดการกับ User</a></p>
-         </div>
-         </td>
-        <table width="200" border="0" align="right">
-
-          <tr>
- <a href="userhome.php?hello1=true" style="margin-left:800px" class="btn btn-primary" >ก่อนหน้า</a>
-  <a href="userhome.php?hello2=true"  class="btn btn-primary" >ถัดไป</a>
-            <td>
+    <form class="bg-index" method="get" style = "margin-left :0%">
 
 
 
 
-  </form>
-</nav></td>
-          </tr>
-        </table>
-        <table width="200" border="0" align="right">
-          <tr>
-          </tr>
-        </table>
-        <p>&nbsp;</p></td>
 
-      <td width="70" valign="top"><p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p></td>
-      <th width="261" valign="top">&ensp;
-       <!-- Optional JavaScript -->
+  <table width="100%" border="0">
+<div class = " columns">
+<div class = " column">
+
+<a href="userhome.php?hello1=true" style="margin-left:0%" class="button is-primary is-outlined" >ก่อนหน้า</a>
+&nbsp;<a href="userhome.php?hello2=true"  class="button is-primary is-outlined" >ถัดไป</a>
+
+
+ &nbsp; 
+
+  <input placeholder="ค้นหากระทู้" type="text" name="q" id="q" style = "margin-left : 35%" >
+  <input type="submit" class="button is-primary" name="search" id="search" value="ค้นหา" />
+ 
+ 
+
+</div>
+
+
+</div>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script></td>
+      <td width="70%" valign="top">
+	  <div id="p1"  class="notification is-primary" role="alert"><a href="look.php?set= <?php echo $listID[$i]."\"";?>><?php if(isset($list[$i])) {echo "  <".$listType[$i].">  ".$list[$i];} ?></a></div>
+        <div id="p2" class="notification is-primary" role="alert"> <a href="look.php?set= <?php echo $listID[$i+1]."\"";?>><?php if(isset($list[$i+1])){echo "  <".$listType[$i+1].">  ".$list[$i+1];} ?></a></div>
+        <div id="p3" class="notification is-primary" role="alert"><a href="look.php?set= <?php echo $listID[$i+2]."\"";?>><?php if(isset($list[$i+2])){echo "  <".$listType[$i+2].">  ".$list[$i+2];} ?></a></div>
+        <div id="p4" class="notification is-primary" role="alert"> <a href="look.php?set= <?php echo $listID[$i+3]."\"";?>><?php if(isset($list[$i+3])) {echo "  <".$listType[$i+3].">  ".$list[$i+3];} ?></a></div>
+        <div id="p5" class="notification is-primary" role="alert"> <a href="look.php?set= <?php echo $listID[$i+4]."\"";?>><?php if(isset($list[$i+4])) {echo "  <".$listType[$i+4].">  ".$list[$i+4];} ?></a></div>
+        <div id="p6" class="notification is-primary" role="alert"> <a href="look.php?set= <?php echo $listID[$i+5]."\"";?>><?php if(isset($list[$i+5])) {echo "  <".$listType[$i+5].">  ".$list[$i+5];} ?> </a></div>
+        <div id="p7" class="notification is-primary" role="alert"> <a href="look.php?set= <?php echo $listID[$i+6]."\"";?>><?php if(isset($list[$i+6])) {echo "  <".$listType[$i+6].">  ".$list[$i+6];} ?></a></div>
+        <div id="p8" class="notification is-primary" role="alert"> <a href="look.php?set= <?php echo $listID[$i+7]."\"";?>><?php if(isset($list[$i+7])) {echo "  <".$listType[$i+7].">  ".$list[$i+7];} ?></a></div>
+        <div id="p9" class="notification is-primary" role="alert"> <a href="look.php?set= <?php echo $listID[$i+8]."\"";?>><?php if(isset($list[$i+8])) {echo "  <".$listType[$i+8].">  ".$list[$i+8];} ?></a></div>
+      	<div id="p10" class="notification is-primary" role="alert"> <a href="look.php?set= <?php echo $listID[$i+9]."\"";?>><?php if(isset($list[$i+9])) {echo "  <".$listType[$i+9].">  ".$list[$i+9];} ?></a></div>
+
+
+        <td width="10%" valign="top"></td>
+      <th width="20%" valign="top"  >&ensp;        <!-- Optional JavaScript -->
+      
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
+        <div class="list-group">
+         
+		 <p><h3 class="navi" style="padding:10px;border-radius:10px;border-style:solid;border-color:#00d0b1;"> เมนู </h3></p>
+		 <h3 class="navbar-item">     </h3>  <p><input type="submit" class="list-group-item list-group-item-action" name="topost" id="topost" value="กระทู้ที่โพส" />           </p>
+		 <h3 class="navbar-item">     </h3>  <p><input type="submit" class="list-group-item list-group-item-action" name="tofollow" id="tofollow" value="กระทู้ที่ติดตาม" />           </p>
+		 <h3 class="navbar-item">     </h3>  <p><a href="admin.php" id="manage" class="list-group-item list-group-item-action ">จัดการกับ User</a></p>
+         </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script></th>
     </tr>
   </table>
-  <table width="200" border="0" align="right">
-    <tr>
-      <td>&nbsp;</td>
-    </tr>
-  </table>
+ 
+</form>
+
+
+</div>
+
+</section>
+ <section class = "section">
+ 
+<footer class="footer bg-indexs">
+  <div class="content has-text-centered">
+    <p>
+  Copyright Katoo Online 2018
+  <p>Contact information: <a href="https://www.google.com/intl/th/gmail/about/#">katoo_admin@gmail.com</a></p>
+    </p>
   </div>
+</footer>
+
+</section>
+ </section>
+
+  
   </body>
 </html>
+
