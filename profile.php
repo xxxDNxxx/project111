@@ -57,9 +57,7 @@ background-color: rgb(93, 250, 185);
   	session_start();
 	if(isset($_POST['update2'])){
 		if((isset($_POST['username'])&&isset($_POST['password']))){
-			$collection->update(array("username"=>$_POST['username']),array('$set'=>array("password"=>$_POST['password'],
-			"name"=>$_POST['name'],"email"=>$_POST['email'],"address"=>$_POST['address'],"district"=>$_POST['district'],
-			"province"=>$_POST['province'],"city"=>$_POST['city'],"zipcode"=>$_POST['zipcode'])));
+			$collection->update(array("username"=>$_POST['username']),array('$set'=>array("password"=>$_POST['password'],"email"=>$_POST['email'])));
 
 		}
 		}
@@ -127,57 +125,33 @@ background-color: rgb(93, 250, 185);
 
 <form method="post" style = "margin-left : 33%">
 
-<div class = "column">
-<p>
-   <b>ชื่อผู้ใช้</b>
-     <input name="username" type="text"  id="username" style="margin-left:10px"  value="<?php echo $user ?>" readonly>
-     </p>
-</div>
 
-<div class = "column">
-     <p>
- <b>รหัสผ่าน</b>
-    <input name="password"type="password"  id="password" style="margin-left:11px" value="<?php echo $password ?>">
-    </p>
-
-</div>
+<div class="label" style = "color : black">ชื่อผู้ใช้</div>
+     <input class = "input" name="username" type="text"  id="username" style = "width : 100%"  value="<?php echo $user ?>" readonly>
+   
+<div class="label" style = "color : black">รหัสผ่าน</div>
+    <input class = "input" name="password"type="password"  id="password" value="<?php echo $password ?>">
 
 
-<div class = "column">
+<div class="label" style = "color : black">เพศ</div>
+  <input class = "input" name="gender" type="text"  id="gender"  value="<?php echo $gender ?>">
+   
 
-    <p>
-  <b>เพศ</b>
-  <input name="gender" type="text"  id="gender" style="margin-left:51px" value="<?php echo $gender ?>">
-	     </p>
+<div class="label" style = "color : black">อีเมล</div>
+      <input class = " input " name="email" type="email"  id="email"  value="<?php echo $email ?>">
 
-</div>
-
-
-<div class = "column">
+<div class="label" style = "color : black">วันที่สมัคร</div>
+ <input class = "input" name="day" type="text"  id="day"  value="<?php echo $day ?>" readonly>
 
 
-         <p>
-   <b>อีเมล</b>
-      <input name="email" type="email"  id="email" style="margin-left:40px" value="<?php echo $email ?>">
-      </p>
-</div>
+ <!-- <h3 class="navbar-item">     </h3> -->
 
+  <input class = " input button is-primary is-outlined " style=" width: auto" type="submit"  name="update2" onclick="return confirm('Are you sure?')" value="แก้ไขข้อมูล">
 
-
-<div class = "column">
-
-      <p>
-<b>วันที่สมัคร</b>
- <input name="day" type="text"  id="day" style="margin-left:8px" value="<?php echo $day ?>" readonly>
-</p>
-
-</div>
-
-<br>
-  <input style="margin-left: 40%; width:100px" type="submit"  class="button is-primary is-outlined"  name="update2" onclick="return confirm('Are you sure?')" value="แก้ไขข้อมูล">
 
 
 </form>
+
 </div>
 
 </div>
@@ -185,6 +159,9 @@ background-color: rgb(93, 250, 185);
 
 </section>
  
+
+
+
  <section class = "section">
  
 <footer class="footer bg-indexs">
@@ -196,5 +173,8 @@ background-color: rgb(93, 250, 185);
   </div>
 </footer>
  </section>
+
+
+
   </body>
 </html>
