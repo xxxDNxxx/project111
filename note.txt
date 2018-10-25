@@ -17,3 +17,5 @@ P 5 contact us
 P 6 profile
 P 7 alert
 P 8 กระทู้ของฉัน Userhome
+p 9 สร้างการทู้บทความ  
+p 10 สร้างกระทู้คำถาม  

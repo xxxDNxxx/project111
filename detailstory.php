@@ -1,21 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" >
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <style type="text/css">
-    body {
+    
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-	background-image:url(1511.jpg);
-	background-size:cover;
-	background-attachment:fixed;
+  .header-image2 {/*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
+
+/*background-image: url("https://www.picz.in.th/images/2018/09/17/fHdgtW.png"); */
+background-image: url("https://www.picz.in.th/images/2018/09/18/fHTIGu.png");
+/*background-image: url("https://www.picz.in.th/images/2018/09/17/f8MP1q.png"); */
+
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: initial;
+background-size: 100%;
+background-color: rgb(93, 250, 185);
+}
 
 
-	}
 	.klong{
 		border-style:solid;
 		background:#0C0;
@@ -27,9 +44,6 @@
 		padding:20px;
 		background:#69F;
 
-	}
-	.area{
-		margin-left:280px;
 	}
 
     </style>
@@ -64,36 +78,47 @@
 
 ?>
 
-<title>Weblog</title>
+<title>KATOO - TELL YOUR STORY</title>
 </head>
-<body>
-<div align="center">
-  <img  src="31344686_1704141333000568_3657415830821404672_n.png" width="100%" height="200" >
+<body class = " bg-indexs">
+
+
+    <section class="hero is-primary  is-small  ">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <img src = "img/trong.png" alt ="logo " width = "30%"  height = "auto" >
+    </div>
+        <!-- Hero content: will be in the middle -->
+    <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li class="is-">
+            <a href= "index.php">หน้าหลัก</a>
+          </li>
+          <li class = "is-active"><a href="create.php">สร้างกระทู้</a></li>
+          <li><a href="userhome.php?set=true">กระทู้ของฉัน</a></li>
+         
+          <li><a href="profile.php">โปรไฟล์</a></li>
+          <li><a href="alert.php">แจ้งเตือน</a></li>
+
+          <li><a href="login.php">ออกจากระบบ</a></li>
+
+<div class="navbar-end">
+ <!-- <a class="navbar-item"> -->
+       <li>  <?php echo "ชื่อผู้ใช้"."   ".$_SESSION['username'];?></li>
+  <!--  </a> -->
+</div>
+        </ul>
+      </div>
+      </nav>
   </div>
- <br>
-   <form  method="post">
-  <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a>
-&ensp;&ensp;&ensp;
-<a href="userhome.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
-<a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo  $_SESSION['num'] ?></span> <span class="sr-only"></span></a>
-&ensp;&ensp;&ensp;
-<a href="profile.php" class="btn btn-light">Profile </a>
-&ensp;&ensp;&ensp;
-<a href="login.php" class="btn btn-dark">Logout </a></P>
-<p>&nbsp;</p>
- &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;
- <table width="200" border="0" align="right">
-   <tr>
-      <td>&nbsp;</td>
-    </tr>
-  </table>
-  </div>
-  <div >
- <h3 class="table-warning" style="margin-left:240px;width:300px;padding:10px;border-color:#000;border-style:solid;border-radius:10px"> ประเภทกระทู้ : บทความ</h3>
-  </div>
-<br>
-  <table width="1000" border="0" align="center">
+  </section>
+  <section class = "sectuion bg-indexs">
+<br/>
+  <p class = "title is-1" style = " text-align : center ; margin-top ; 3%; text-shadow: 3px 2px black; color :  #ffffff"> บทความ</p>
+<form method="post">
+  <table width="70%" border="0" align="center">
     <tr>
       <td><div class="input-group mb-3">
         <div class="input-group-prepend"> <span class="input-group-text" id="inputGroup-sizing-default"><b>หัวข้อ</b></span> </div>
@@ -101,22 +126,37 @@
       </div></td>
     </tr>
   </table>
-  <br>
-	<div  style="margin-left:260px" class="input-group-prepend"> <span style="color:#C60" class="input-group-text" ><b>รายละเอียด</b></span> </div>
+ 
+	<div  style="margin-left:15%" class="input-group-prepend"> <span style="color:#fffff" class="input-group-text" ><b>รายละเอียด</b></span> </div>
 
-  <p>&nbsp;</p>
     <label for="textfield"></label>
-    <textarea style="border-radius:10px;margin:10px;padding:20px;margin-left:260px;width:1000px;height:500px;border-style:solid;border-width:3px;border-color:
-  #000"" name="contend"  placeholder="พิมพ์รายละเอียด"></textarea>
+    <textarea style="border-radius:10px;
+    margin:10px;
+    padding:20px;
+    margin-left:15%;
+    width:70%;
+    height:300px;
+    border-style:solid;
+    border-width:0px;
+    border-color:#000" name="contend"  placeholder="พิมพ์รายละเอียด"></textarea>
 
-<button  type="submit" class="btn btn-primary" style="margin-left:1200px;" onclick="return confirm('Are you sure?')" >ตั้งกระทู้</button>
+<button  type="submit" class="btn btn-primary" style="margin-left:80%;" onclick="return confirm('Are you sure?')" >ตั้งกระทู้</button>
 
 </form>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
+
+
+
+<footer class="footer bg-indexs">
+  <div class="content has-text-centered">
+    <p>
+  Copyright Katoo Online 2018
+  <p>Contact information: <a href="https://www.google.com/intl/th/gmail/about/#">katoo_admin@gmail.com</a></p>
+    </p>
+  </div>
+</footer>
+  </section>
+
 </body>
 </html>

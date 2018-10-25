@@ -96,7 +96,7 @@ background-color: rgb(93, 250, 185);
   
   <div class = " container ">
   
-  
+  <p class = "title is-1" style = "text-align : center ; text-shadow: 3px 2px black; color :  #ffffff">การแจ้งเตือน</p>
 
    <form  method="get" style = "margin-top : 3%">
  
