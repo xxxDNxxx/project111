@@ -78,7 +78,7 @@ background-color: rgb(93, 250, 185);
 ?>
 <title>KATOO - TELL YOUR STORY</title>
 </head>
-<body>
+<body class = " bg-indexs">
 <section class="hero is-primary  is-small  ">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
