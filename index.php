@@ -172,7 +172,7 @@
 
 
 
-<title>KATOO - TELL YOUR STORY</title>
+<title>Eventkiller</title>
 
 
     <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
@@ -192,7 +192,7 @@ img {
   .header-image2 {/*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
 
 /*background-image: url("https://www.picz.in.th/images/2018/09/17/fHdgtW.png"); */
-background-image: url("https://www.picz.in.th/images/2018/09/18/fHTIGu.png");
+/*background-image: url("https://www.picz.in.th/images/2018/09/18/fHTIGu.png");*/
 /*background-image: url("https://www.picz.in.th/images/2018/09/17/f8MP1q.png"); */
 
 background-position: center center;
@@ -212,7 +212,7 @@ background-color: rgb(93, 250, 185);
     <section class="hero is-primary  is-small  ">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
-      <img src = "img/trong.png" alt ="logo " width = "30%"  height = "auto" >
+      
     </div>
 
         <!-- Hero content: will be in the middle -->
@@ -224,10 +224,10 @@ background-color: rgb(93, 250, 185);
           <li class="is-active">
             <a href= "index.php">หน้าหลัก</a>
           </li>
-          <li><a href="create.php">สร้างกระทู้</a></li>
-          <li><a href="userhome.php?set=true">กระทู้ของฉัน</a></li>
+          <li><a href="create.php">สร้างกิจกรรม</a></li>
+          <li><a href="userhome.php?set=true">กิจกรรมของฉัน</a></li>
          
-          <li><a href="profile.php">โปรไฟล์</a></li>
+          <li><a href="profile.php">จัดการโปรไฟล์</a></li>
           <li><a href="alert.php">แจ้งเตือน</a></li>
 
           <li><a href="login.php">ออกจากระบบ</a></li>
@@ -274,9 +274,7 @@ background-color: rgb(93, 250, 185);
 
 <p>&nbsp;</p>
 <div style="margin-left:0%">
- <input type="submit" class="button is-primary is-outlined" name="tob10" id="top10" value="10 กระทู้ยอดคอมเมนต์สูงสุด" />
- <input type="submit" class="button is-primary is-outlined" name="tob11" id="top11" value="10 กระทู้ยอดถูกใจสูงสุด" />
-
+ <h1 style="font-size: 35px">อีเวนต์ทั้งหมด</h1>
 </div>
 
   <table width="100%" border="0">
@@ -301,18 +299,7 @@ background-color: rgb(93, 250, 185);
       
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <div class="list-group">
-          <p><h3 class="navi" style="padding:10px;border-radius:10px;border-style:solid;border-color:#00d0b1;"> ประเภทกระทู้ </h3></p>
-          <h3 class="navbar-item">     </h3>
-          <p><a href="select.php?story=true" class="list-group-item list-group-item-action">บทความ</a>            </p>
-          <h3 class="navbar-item">     </h3>
-          <p><a href="select.php?news=true" class="list-group-item list-group-item-action">ข่าว</a>            </p>
-          <h3 class="navbar-item">     </h3>
-          <p><a href="select.php?que=true" class="list-group-item list-group-item-action">คำถาม</a>            </p>
-          <h3 class="navbar-item">     </h3>
-          <p><a href="select.php?review=true" class="list-group-item list-group-item-action ">รีวิว</a></p>
-          <h3 class="navbar-item">     </h3>
-          <p> <a href="select.php?store=true" class="list-group-item list-group-item-action " >ขายของ</a> </p></div>
+        
          </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script></th>
     </tr>
@@ -330,15 +317,6 @@ background-color: rgb(93, 250, 185);
 
 </div>
 
-
-<footer class="footer bg-indexs">
-  <div class="content has-text-centered">
-    <p>
-  Copyright Katoo Online 2018
-  <p>Contact information: <a href="https://www.google.com/intl/th/gmail/about/#">katoo_admin@gmail.com</a></p>
-    </p>
-  </div>
-</footer>
 
 </section>
 

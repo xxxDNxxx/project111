@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <style type="text/css">
+	<link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+	<style type="text/css">
     body {
 	
-	background-image:url(1511.jpg);
+	background-color: rgb(93, 250, 185);
 	background-size:cover;
 	background-attachment:fixed;
 	
@@ -40,27 +43,20 @@
 	
     </style>
      <?php
-	 					$user="";
-						$password="";
-						$name="";
-						$email="";
-						$address="";
-						$district="";
-						$gender="";;
-						$province="";
-						$city="";;
-						$zipcode="";
-						$day="";
-						$status="";
-	  $connection= new MongoClient();
-  $db= $connection->weblog;
-  $collection=$db->user;
+	$user="";
+	$password="";
+	$name="";
+	$email="";
+	$gender="";
+	$status="";
+	$connection= new MongoClient();
+  	$db= $connection->ktonline;
+  	$collection=$db->user;
   	session_start();
 	if(isset($_POST['update2'])){
 		if((isset($_POST['username'])&&isset($_POST['password']))){
-			$collection->update(array("username"=>$_POST['username']),array('$set'=>array("password"=>$_POST['password'],
-			"name"=>$_POST['name'],"email"=>$_POST['email'],"address"=>$_POST['address'],"district"=>$_POST['district'],
-			"province"=>$_POST['province'],"city"=>$_POST['city'],"zipcode"=>$_POST['zipcode'],"status"=>$_POST['status'])));
+			$collection->update(array("username"=>$_POST['username']),array('$set'=>array("password"=>$_POST['password']
+			,"gender"=>$_POST['sex'],"email"=>$_POST['email'],"status"=>$_POST['status'])));
 			
 		}
 		}
@@ -89,15 +85,8 @@
 						foreach($cursor as $log){
 						$user=$log['username'];
 						$password=$log['password'];
-						$name=$log['name'];
+						$gender=$log['sex'];
 						$email=$log['email'];
-						$address=$log['address'];
-						$district=$log['district'];
-						$gender=$log['gender'];
-						$province=$log['province'];
-						$city=$log['city'];
-						$zipcode=$log['zipcode'];
-						$day=$log['dayregister'];
 						$status=$log['status'];
 		}
 					}
@@ -118,27 +107,53 @@
     <title>Weblog</title>
   </head>
 <body>
-    <img  src="31344686_1704141333000568_3657415830821404672_n.png" >
-    <br>
-    <br>
-  <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a> 
-&ensp;&ensp;&ensp; 
-<a href="userhome.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
-<a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php echo  $_SESSION['num'] ?></span> <span class="sr-only"></span></a>
-&ensp;&ensp;&ensp;
-<a href="profile.php" class="btn btn-light">Profile </a>
-&ensp;&ensp;&ensp;
-<a href="login.php" class="btn btn-dark">Logout </a>
+<section class="hero is-primary  is-small  ">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      
+    </div>
+
+        <!-- Hero content: will be in the middle -->
+    <div class="hero-foot">
+      
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li class="is-active">
+            <a href= "index.php">หน้าหลัก</a>
+          </li>
+          <li><a href="create.php">สร้างกิจกรรม</a></li>
+          <li><a href="userhome.php?set=true">กิจกรรมของฉัน</a></li>
+         
+          <li><a href="profile.php">จัดการโปรไฟล์</a></li>
+          <li><a href="alert.php">แจ้งเตือน</a></li>
+
+          <li><a href="login.php">ออกจากระบบ</a></li>
+
+<div class="navbar-end">
+ <!-- <a class="navbar-item"> -->
+       <li>  <?php echo "ชื่อผู้ใช้"."   ".$_SESSION['username'];?></li>
+  <!--  </a> -->
+
+
+
+</div>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  </section>
  
 <br>
 <br>
 <br>
 <form method="get">
  <center >
-  <label  for="q"></label><b style="color:#F63;border:1px solid #000;padding:8px">ค้นหา username</b>
+  <label  for="q"></label><b style="color:#FFFFFF;border:1px solid #000;padding:8px">ค้นหา username</b>
   <input style="width:200px;" type="text" name="q" id="q"  />
-  <input  style="color:#00F;background-color:#0FF;border:2px solid #000;border-radius:10px;width:100px;margin-left:20px;" type="submit" class="btn btn-light" name="search" id="search" value="ค้นหา"  />
+  <input  class="button is-primary is-1" type="submit" class="btn btn-light" name="search" id="search" value="ค้นหา"  />
   </center>
   </form>
 <br>
@@ -154,10 +169,6 @@
  <b>password</b>
     <input name="password" type="text"  id="password" style="margin-left:11px" value="<?php echo $password ?>">
     </p>
-    <p>
-  <b>ชื่อ</b>
-    <input name="name" type="text"  id="name" style="margin-left:60px" value="<?php echo $name ?>">
-   </p>
    <p>
   <b>เพศ</b>
   <input name="gender" type="text"  id="gender" style="margin-left:51px" value="<?php echo $gender ?>">
@@ -166,32 +177,6 @@
    <b>Email</b>
       <input name="email" type="email"  id="email" style="margin-left:40px" value="<?php echo $email ?>">
       </p>
-      <p>
-  <b>Address</b>
-     <input name="address" type="text"  id="address" style="margin-left:20px"  value="<?php echo $address ?>">
-     </p>
-     <p>
-  <b>ตำบล</b>
-   <input name="city" type="text"  id="city" style="margin-left:40px" value="<?php echo $city ?>">
-   </p>
-   <p>
-  <b>อำเภอ</b>
-     <input name="district" type="text"  id="district" style="margin-left:35px" value="<?php echo $district ?>">
-  </p>
-  <p>
-   <b>จังหวัด</b>
-    
-     <input name="province" type="text"  id="province" style="margin-left:31px" value="<?php echo $province ?>">
-     </p>
-     <p>
-<b>Zipcode</b>
- 
-     <input name="zipcode" type="text"  id="zipcode" style="margin-left:18px"  value="<?php echo $zipcode ?>">
-     </p>
-     <p>
-<b>วันที่สมัคร</b>
- <input name="day" type="text"  id="day" style="margin-left:8px" value="<?php echo $day ?>" >
-</p>
 <p>
 <b>Status</b>
  <input name="status" type="text"  id="status" style="margin-left:31px" value="<?php echo $status ?>" readonly>

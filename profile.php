@@ -68,7 +68,7 @@ background-color: rgb(93, 250, 185);
 		$user=$log['username'];
 		$password=$log['password'];
 		$email=$log['email'];
-		//$gender=$log['gender'];
+		$gender=$log['sex'];
 		//$day=$log['dayregister'];
 		}
 
@@ -132,16 +132,19 @@ background-color: rgb(93, 250, 185);
 <div class="label" style = "color : black">รหัสผ่าน</div>
     <input class = "input" name="password"type="password"  id="password" value="<?php echo $password ?>">
 
-
-<div class="label" style = "color : black">เพศ</div>
-  <input class = "input" name="gender" type="text"  id="gender"  value="<?php echo $gender ?>">
+    <div class="label" style = "color : black">เพศ</div>
+    <div class="select">
+  <select>
+    <option><?php echo $gender ?></option>
+    <option value="ชาย">ชาย</option>
+    <option value="หญิง">หญิง</option>
+  </select>
+</div>
    
-
 <div class="label" style = "color : black">อีเมล</div>
       <input class = " input " name="email" type="email"  id="email"  value="<?php echo $email ?>">
 
-<div class="label" style = "color : black">วันที่สมัคร</div>
- <input class = "input" name="day" type="text"  id="day"  value="<?php echo $day ?>" readonly>
+
 
 
  <!-- <h3 class="navbar-item">     </h3> -->

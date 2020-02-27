@@ -1,6 +1,6 @@
 <?php
   $connection = new MongoClient();
-  $db = $connection->ktonline;
+  $db = $connection->faceverification;
   $collection = $db->user;
   $captcha;
 

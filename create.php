@@ -1,30 +1,23 @@
 <!doctype html>
-<html lang="en" class = "bg-indexs">
+<html lang="en" >
   <head>
-  <?php 
-  session_start();
-  ?>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-   
 
     <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
     <link rel="stylesheet" href="./stylesheet.css">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 
-
-    <style >
-  
-img {
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <style type="text/css">
+    
+    img {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
 
   .header-image2 {/*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
 
@@ -39,27 +32,71 @@ background-size: 100%;
 background-color: rgb(93, 250, 185);
 }
 
+
+	.klong{
+		border-style:solid;
+		background:#0C0;
+		width:200px;
+		padding:5px;
+		border-color:#000;
+		margin-left:250px;
+		margin-bottom:50px;
+		padding:20px;
+		background:#69F;
+
+	}
+
     </style>
+    <?php
+
+		session_start();
+		unset( $_SESSION['idforum']);
+
+  $connection= new MongoClient();
+  $db= $connection->ktonline;
+  $collection=$db->forum;
+  $cursor = $collection->find();
+  $totalrec=$cursor->count();
+  $pid=rand(1,100000000);
+  foreach($cursor as $log){
+		$ch=$log['_id'];
+		if($pid==$ch){
+			$pid=rand(1,100000000);
+		}
+				 }
+   if(!empty($_POST['title'])&&!empty($_POST['contend'])){
+	$collection->insert(array("_id"=>$pid,"วันที่"=>date("d-m-Y"),"เวลา"=>date("H:i"),"doc_type"=>"บทความ","name"=>$_POST['title'],
+	"contend"=>$_POST['contend'],"username"=>$_SESSION['username'],"like"=>0,"comment"=>0));
+	 $_SESSION['idforum']=$pid;
+	 header('Location:look.php');
+
+	}else{
+		if(isset($_POST['title'])&&isset($_POST['contend'])){
+		 echo "<script type='text/javascript'>alert('กรุณาป้อนข้อมูลให้ครบ!!');</script>";	}
+		}
+
+
+?>
 
 <title>KATOO - TELL YOUR STORY</title>
 </head>
-<body class = "bg-indexs">
-<section class="hero is-primary  is-small  ">
+<body class = " bg-indexs">
+
+
+    <section class="hero is-primary  is-small  ">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <img src = "img/trong.png" alt ="logo " width = "30%"  height = "auto" >
     </div>
-
         <!-- Hero content: will be in the middle -->
     <div class="hero-foot">
-      
     <nav class="tabs is-boxed is-fullwidth">
       <div class="container">
         <ul>
-          <li >
+          <li class="is-">
             <a href= "index.php">หน้าหลัก</a>
           </li>
-          <li class="is-active"><a href="create.php">สร้างกระทู้</a></li>
+          <li class = "is-active"><a href="create.php">สร้างกระทู้</a></li>
           <li><a href="userhome.php?set=true">กระทู้ของฉัน</a></li>
          
           <li><a href="profile.php">โปรไฟล์</a></li>
@@ -71,127 +108,43 @@ background-color: rgb(93, 250, 185);
  <!-- <a class="navbar-item"> -->
        <li>  <?php echo "ชื่อผู้ใช้"."   ".$_SESSION['username'];?></li>
   <!--  </a> -->
-
-
-
 </div>
-
         </ul>
       </div>
-    </nav>
+      </nav>
   </div>
-
   </section>
-<!-- ชุดปุ่ม menu เก่า
-<form  method="get"> 
-  <a href="index.php"  class="btn btn-primary" style="margin-left:560px">Home</a>
-  <a href="create.php" class="btn btn-success" style="margin-left:30px" >สร้างกระทู้</a> 
-&ensp;&ensp;&ensp; 
-<a href="userhome.php?set=true" class="btn btn-info">User Home</a> &ensp;&ensp;&ensp;
-<a href="alert.php" type="button" class="btn btn-primary"> แจ้งเตือน <span class="badge badge-light"><?php  echo $_SESSION['num'] ?></span> <span class="sr-only"></span></a>
-&ensp;&ensp;&ensp;
-<a href="profile.php" class="btn btn-light">Profile </a>
-&ensp;&ensp;&ensp;
-<a href="login.php" class="btn btn-dark">Logout </a>
- </form></P>
-<p>&nbsp;</p>
- &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;
+  <section class = "sectuion bg-indexs">
+<br/>
+  <p class = "title is-1" style = " text-align : center ; margin-top ; 3%; text-shadow: 3px 2px black; color :  #ffffff"> บทความ</p>
+<form method="post">
+  <table width="70%" border="0" align="center">
+    <tr>
+      <td><div class="input-group mb-3">
+        <div class="input-group-prepend"> <span class="input-group-text" id="inputGroup-sizing-default"><b>หัวข้อ</b></span> </div>
+        <input type="text" name="title" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      </div></td>
+    </tr>
+  </table>
  
+	<div  style="margin-left:15%" class="input-group-prepend"> <span style="color:#fffff" class="input-group-text" ><b>รายละเอียด</b></span> </div>
 
- -->
+    <label for="textfield"></label>
+    <textarea style="border-radius:10px;
+    margin:10px;
+    padding:20px;
+    margin-left:15%;
+    width:70%;
+    height:300px;
+    border-style:solid;
+    border-width:0px;
+    border-color:#000" name="contend"  placeholder="พิมพ์รายละเอียด"></textarea>
 
-<div class = "container">
-<section class="section">
+<button  type="submit" class="btn btn-primary" style="margin-left:80%;" onclick="return confirm('Are you sure?')" >ตั้งกระทู้</button>
 
-      <div class="columns ">
-   
-          <div class="column field is-horizontal">
-    
-      <div class="tile is-parent ">
-          <article class="tile is-child">
-
-              <p class="title" style = "text-align : center">
-                  บทความ
-                </p>
-              <figure class="image is-128x128 ">
-                <a href = "detailstory.php">   <img src="type-20180426T121636Z-001/type/blog.png" style = "margin-left: 30%;"> </a>
-                </figure>
-
-          </article>
-
-
-        </div>
-     
-
-
-        <div class="tile is-parent ">
-            <article class="tile is-child ">
-  
-                <p class="title" style = "text-align : center">
-                    ข่าว
-                  </p>
-                <figure class="image is-128x128">
-                <a href = "detailnews.php">   <img src="type-20180426T121636Z-001/type/news.png" style = "margin-left: 30%;"> </a>
-                  </figure>
-
-            </article>
-  
-  
-          </div>
-       
-
-
-          <div class="tile is-parent ">
-              <article class="tile is-child ">
-    
-                  <p class="title" style = "text-align : center">
-                      คำถาม
-                    </p>
-                  <figure class="image is-128x128">
-                  <a href = "detailque.php">   <img src=" type-20180426T121636Z-001/type/quaion.png" style = "margin-left: 30%;"> </a>
-                </figure>
-  
-              </article>
-    
-    
-            </div>
-
-
-            
-          <div class="tile is-parent ">
-              <article class="tile is-child ">
-                  <p class="title" style = "text-align : center">
-                      รีวิว
-                    </p>
-                  <figure class="image is-128x128">
-                  <a href = "detailreview.php">   <img src="type-20180426T121636Z-001/type/review.png" style = "margin-left: 30%;"> </a>
-              </figure>
-  
-              </article>
-    
-    
-            </div>
-
-
-
-            
-          <div class="tile is-parent ">
-              <article class="tile is-child ">
-                  <p class="title" style = "text-align : center">
-                      ขายของ
-                    </p>
-                  <figure class="image is-128x128">
-                  <a href = "detailstore.php">   <img src="type-20180426T121636Z-001/type/shop.png" style = "margin-left: 30%;"> </a>
-              </figure>
-  
-              </article>
-    
-    
-            </div>
-
-
-    </div>
-  </div>
+</form>
+<br>
+<br>
 
 
 
@@ -203,56 +156,7 @@ background-color: rgb(93, 250, 185);
     </p>
   </div>
 </footer>
-
-
-
   </section>
-  <!-- 
-
-  <table width="200" border="0" align="center">
-   <tr>
-     <th nowrap><h2>เลือกประเภท</h2></th>
-   </tr>
- </table>
-
- <table width="812" border="0" align="center" cellpadding="25">
-  
-   <tr>
-      <td width="160" height="500" align="center" valign="middle"><p> <a href="detailstory.php"><img src="type-20180426T121636Z-001/type/blog.png" align="middle">				       </a></p>
-        <p>&nbsp;</p>
-     <p><B>บทความ</B></p></td>
-      <td width="153" align="center" valign="middle" nowrap><p>&nbsp;
-        </p>
-        <p>&nbsp;</p>
-        <p> <a href="detailnews.php" ><img src="type-20180426T121636Z-001/type/news.png" width="153" height="156" align="middle"></a>
-        </p>
-        <p>&nbsp;</p>
-        <p><b>ข่าว</b></p>
-        <p>&nbsp;</p>
-      <p>&nbsp;</p></td>
-      <td width="160" align="center" valign="middle"><form>
-        <p> <a href="detailque.php"> <img src="type-20180426T121636Z-001/type/quaion.png" align="middle"></a>
-        </p>
-        <p>&nbsp;</p>
-      </form>
-      <p><B>คำถาม</B></p></td>
-      <td width="160" align="center" valign="middle" nowrap><p><a href="detailreview.php"><img src="type-20180426T121636Z-001/type/review.png" align="middle"></a></p>
-        <p>&nbsp;</p>
-        <p><b>รีวิว</b></p>
-        <p></td>
-      <td width="157" align="center" valign="middle" nowrap><form>
-        <p>&nbsp;        </p>
-        <p> <a href="detailstore.php" ><img src="type-20180426T121636Z-001/type/shop.png" align="middle"></a>
-        </p>
-        <p>&nbsp;</p>
-      </form>
-      <p><B>ขายของ</B></p>
-      <p>&nbsp;</p></td>
-   </tr>
-</table>
-
-  -->
-</div>
 
 </body>
 </html>

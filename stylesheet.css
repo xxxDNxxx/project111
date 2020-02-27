@@ -1,54 +1,49 @@
-.eiei{
-
+.eiei {
     margin-right: 40%;
     margin-left: 40%;
-
 }
 
-.ei{
-
-  margin-right: 20%;
-  margin-left: 20%;
-
-}.bg-login {
-
-  background-color: #00d0b1;
+.ei {
+    margin-right: 20%;
+    margin-left: 20%;
 }
-.admincontact{
-  text-decoration: underline;
-  
+
+.bg-login {
+    background-color: #00d0b1;
 }
+
+.admincontact {
+    text-decoration: underline;
+}
+
 .bg-indexs {
-
-  background-color: rgba(0, 208, 177, 0.12);
+    background-color: rgba(0, 208, 177, 0.12);
 }
-.navi{
-  text-align: center;
+
+.navi {
+    text-align: center;
 }
 
 .bg-primary {
-
     background-color: #00d0b1;
-  }
+}
 
-  html{
+html {
     background-color: #ffffffad;
-  }
+}
 
-  .header-image {/*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
-
+.header-image {
+    /*https://www.picz.in.th/images/2018/09/17/f8MP1q.png*/
     /*background-image: url("https://www.picz.in.th/images/2018/09/17/fHdgtW.png"); */
-    background-image: url("https://www.picz.in.th/images/2018/09/18/fHTIGu.png");
+    /*background-image: url("https://www.picz.in.th/images/2018/09/18/fHTIGu.png");*/
     /*background-image: url("https://www.picz.in.th/images/2018/09/17/f8MP1q.png"); */
-
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: initial;
     background-size: 100%;
     background-color: rgb(93, 250, 185);
-  }
+}
 
-
-  .bg-columns{
+.bg-columns {
     background-color: #00d0b1;
-  }
+}

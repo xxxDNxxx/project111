@@ -34,7 +34,7 @@
 </head>
 <body >
 
-    <section class="hero is-primary  is-medium header-image ">
+    <section class="hero is-primary  is-medium  ">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
@@ -51,20 +51,13 @@
             </span>
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
-<div class = "navbar">
-  
-<a class="navbar-item"href="indexx.php">หน้าหลัก</a>
 
-  </div>
             <div class="navbar-end">
                 <a class="navbar-item is-active"href="login.php">
                      เข้าใช้งาน
                   </a>
-                  <a class="navbar-item" href="register.php">
-                     สมัครสมาชิก
-                    </a>
                   <a class="navbar-item" href="contact.php">
-                     ติดต่อเรา
+                     แจ้งปัญหา
                     </a>
             </div>
 
@@ -145,15 +138,5 @@
 
 
     </section>
-
-<footer class="footer bg-indexs">
-  <div class="content has-text-centered">
-    <p>
-  Copyright Katoo Online 2018
-  <p>Contact information: <a href="https://www.google.com/intl/th/gmail/about/#">katoo_admin@gmail.com</a></p>
-    </p>
-  </div>
-</footer>
-
 </body>
 </html>
