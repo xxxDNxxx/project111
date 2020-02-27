@@ -372,13 +372,7 @@
 		?>
 
     <form method="post">
-  <center><textarea style="border-radius:10px;margin:60px;padding:20px;width:1100px;height:300px;border-style:solid;border-width:3px;border-color:
-  #000" name="c1"  id="textfield" placeholder="แสดงความคิดเห็น"></textarea></center>
-  <P Align=right> <button type="submit" style="margin-right:180px" class="btn btn-info"> แสดงความคิดเห็น </button></P>
-   </form>
-    <p>&nbsp;</p>
-    <br>
-    <br><br>
+  
 
 </body>
 </html>
